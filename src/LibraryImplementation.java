@@ -37,9 +37,10 @@ public class LibraryImplementation {
                 printCatalogue(catalogue);//Display entire list of books
                 CheckoutImplementation checkoutImpl = new CheckoutImplementation();
                 checkoutImpl.runCheckoutLoop(catalogue);
-            }else if(menuSelection == 4)
-
-            else if (menuSelection == 5) {
+            } else if (menuSelection == 4) {
+                ReturnImplementation returnImpl = new ReturnImplementation();
+                returnImpl.runReturnLoop(catalogue);
+            } else if (menuSelection == 5) {
                 /*BookAdder adder = new BookAdder();
                 adder.addBook();*/
             }

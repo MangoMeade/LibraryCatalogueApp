@@ -17,8 +17,12 @@ public class CheckoutImplementation {
 
         checkoutSelection = Validator.getInt("Which book would you like to checkout? (Please enter the line number): ", "Please enter a valid line number: ", 1, 12);
 
-        dueDateCreation(catalogue.get(checkoutSelection - 1));
-        System.out.println();
+        if(catalogue.get(checkoutSelection - 1).getStatus() == Status.ON_SHELF){
+            dueDateCreation(catalogue.get(checkoutSelection - 1));
+            System.out.println();
+        } else if (catalogue.get(checkoutSelection - 1).getStatus() == Status.CHECKED_OUT) {
+            System.out.println("Sorry that book is no longer available.");
+        }
 
     }
 

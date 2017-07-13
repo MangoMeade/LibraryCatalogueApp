@@ -12,6 +12,10 @@ public class Book {
     private Status status;
     private Genre genre;
 
+    public Book() {
+
+    }
+
     public Book(String title, String author, Date dueDate, Boolean braille, Status status, Genre genre) {
         this.title = title;
         this.author = author;
@@ -69,4 +73,9 @@ public class Book {
         this.genre = genre;
     }
 
+    @Override
+    public String toString() {
+        return title + " " + author + " " + dueDate + " " + braille + " " + status + " " + genre;
+
+    }
 }

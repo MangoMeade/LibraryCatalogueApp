@@ -6,8 +6,8 @@ import java.util.Scanner;
 /**
  * Created by jenny on 7/12/2017.
  */
-public class Book extends CatalogueTextFile{
-    public static void main(String[] args) {
+public class BookAdder extends CatalogueTextFile{
+    public void addBook() {
         Scanner scnr = new Scanner(System.in);
 
         //Date dueDate = new Date(11/1/1970);

@@ -1,12 +1,12 @@
-Moo Ba Lalala,Sandra Boynton,12/8/2015,false,Reserved,Board Books and Fiction
+Moo Ba Lalala,Sandra Boynton,12/8/2015,true,Reserved,Board Books and Fiction
 Finding London,Ellie Wade,7/7/2008,false,Reserved,Romance and Fiction
-Hunger Games,Suzanne Collings,7/12/2017,false,Reserved,Coming of Age and Fiction
+Hunger Games,Suzanne Collings,7/12/2017,true,Reserved,Coming of Age and Fiction
 A Song of Fire and Ice, George R.R. Martin,7/12/2017,False,Adult fiction
-Romeo and Juliet,Shakespeare,7/12/2017,False,Fiction
-How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg, 7/12/2017, Non-fiction
-Blue Hat Green Hat,Sandra Boynton,7/12/2017,Board Books
-Keeping London,Ellie Wade,7/12/2017,Romance
-Catching Fire,Suzanne Collings,7/12/2017,Coming of Age and Fiction
-A Clash of Kings,George RR Martin,7/12/17,Adult Fiction
-Hamlett,Shakespeare,7/12/17,Fiction
-I am Malala,Malala Yousafzai,7/12/2017,Teen Non-fiction
+Romeo and Juliet,Shakespeare,7/12/2017,true,Reserved,Fiction
+How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg, 7/12/2017,true,Reserved, Non-fiction
+Blue Hat Green Hat,Sandra Boynton,7/12/2017,True,Reserved,Board Books
+Keeping London,Ellie Wade,7/12/2017,False,Reserved,Romance
+Catching Fire,Suzanne Collings,7/12/2017,True,Reserved,Coming of Age and Fiction
+A Clash of Kings,George RR Martin,7/12/17,False,Reserved,Adult Fiction
+Hamlett,Shakespeare,7/12/17,True,Reserved,Fiction
+I am Malala,Malala Yousafzai,7/12/2017,False,Reserved,Teen Non-fiction

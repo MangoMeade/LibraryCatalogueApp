@@ -1,12 +1,13 @@
-Moo Ba Lalala,Sandra Boynton,12/08/2015,true,Reserved,Fiction
-Finding London,Ellie Wade,07/07/2008,false,Reserved,Fiction
-Hunger Games,Suzanne Collings,07/12/2017,true,Reserved,Fiction
-A Song of Fire and Ice, George R.R. Martin,7/12/2017,False,fiction
+Moo Ba Lalala,Sandra Boynton,12/08/2015,true,Checked Out,Fiction
+Finding London,Ellie Wade,07/07/2008,false,On Shelf,Fiction
+Hunger Games,Suzanne Collings,07/12/2017,true,Checked Out,Fiction
+A Song of Fire and Ice, George R.R. Martin,07/12/2017,False,Reserved,Fiction
 Romeo and Juliet,Shakespeare,07/12/2017,true,Reserved,Fiction
-How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg, 07/12/2017,true,Reserved, Non-fiction
+How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/12/2017,true,Reserved,Nonfiction
 Blue Hat Green Hat,Sandra Boynton,07/12/2017,True,Reserved,Fiction
-Keeping London,Ellie Wade,07/12/2017,False,Reserved,Romance
+Keeping London,Ellie Wade,07/12/2017,False,Reserved,Fiction
 Catching Fire,Suzanne Collings,07/12/2017,True,Reserved,Fiction
-A Clash of Kings,George RR Martin,07/12/17,False,Reserved,Fiction
-Hamlett,Shakespeare,07/12/17,True,Reserved,Fiction
-I am Malala,Malala Yousafzai,07/12/2017,False,Reserved,Non-fiction
+A Clash of Kings,George RR Martin,07/12/2017,False,Reserved,Fiction
+Hamlett,Shakespeare,07/12/2017,True,Reserved,Fiction
+I am Malala,Malala Yousafzai,07/12/2017,False,Reserved,Nonfiction
+Bible God 2017-07-13 true On Shelf Fiction  

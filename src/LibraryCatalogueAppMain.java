@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  * Created by jenny on 7/12/2017.
@@ -30,7 +29,7 @@ public class LibraryCatalogueAppMain {
 
         System.out.println("Welcome to the Barely Books Library Terminal:\nThere are 12 books in the library.\n");
 
-        TextFileReader reader = new TextFileReader();
+        TextFileReaderWriter reader = new TextFileReaderWriter();
         ArrayList<Book> catalogue = reader.readFromCatalogue();
 
         LibraryImplementation implementation = new LibraryImplementation();

@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -7,7 +8,7 @@ public class Book {
 
     private String title;
     private String author;
-    private Date dueDate;
+    private LocalDate dueDate;
     private Boolean braille;
     private Status status;
     private Genre genre;
@@ -16,7 +17,7 @@ public class Book {
 
     }
 
-    public Book(String title, String author, Date dueDate, Boolean braille, Status status, Genre genre) {
+    public Book(String title, String author, LocalDate dueDate, Boolean braille, Status status, Genre genre) {
         this.title = title;
         this.author = author;
         this.dueDate = dueDate;
@@ -41,11 +42,11 @@ public class Book {
         this.author = author;
     }
 
-    public Date getDueDate() {
+    public LocalDate getDueDate() {
         return dueDate;
     }
 
-    public void setDueDate(Date dueDate) {
+    public void setDueDate(LocalDate dueDate) {
         this.dueDate = dueDate;
     }
 
@@ -73,9 +74,20 @@ public class Book {
         this.genre = genre;
     }
 
+/*    @Override
+    public String toString() {
+        return "Title: " + title + "   Author: " + author + "   Braille: " + braille + "   Status: " + status + "   Genre: " + genre + "   Previous Due Date: " + dueDate;
+
+    }*/
+
     @Override
     public String toString() {
-        return title + " " + author + " " + dueDate + " " + braille + " " + status + " " + genre;
+        return title + "  " + author + "  " + braille + "  " + status + "  " + genre + "  " + dueDate;
+
+    }
+
+    public String toFileFormat() {
+        return title + "," + author + "," + braille + "," + status + "," + genre + "," + dueDate;
 
     }
 }

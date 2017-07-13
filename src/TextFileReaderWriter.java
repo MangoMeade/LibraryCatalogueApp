@@ -1,13 +1,15 @@
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.time.format.DateTimeFormatter;
 
 /**
  * Created by jenny on 7/12/2017.
  */
-public class TextFileReader {
+public class TextFileReaderWriter {
 
     public void updateCatalogue() {
 
@@ -28,7 +30,7 @@ public class TextFileReader {
 
             while ((line = buffReader.readLine()) != null) {
 
-                String[] bookAttributes = line.split("   "); //FIXME: regex of choice
+                String[] bookAttributes = line.split(","); //FIXME: regex of choice
 
                 catalogue.add(convertToBook(bookAttributes));
 
@@ -48,14 +50,9 @@ public class TextFileReader {
     private Book convertToBook(String[] bookAttributes) {
 
         Book book = new Book();
-        SimpleDateFormat formatter1=new SimpleDateFormat("MM/dd/yyyy");
-        Date dueDate = new Date();
-        //System.out.println(bookAttributes[3]);
-        try {
-            dueDate = formatter1.parse(bookAttributes[2]);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        System.out.println(bookAttributes[2]);
+        LocalDate dueDate = LocalDate.parse("12/08/2015", formatter);
         Boolean braille = new Boolean(bookAttributes[3]);
 
         book.setTitle(bookAttributes[0]);
@@ -75,7 +72,7 @@ public class TextFileReader {
             FileWriter writer = new FileWriter("catalogue.txt", true);
             //BufferedWriter buffWriter = new BufferedWriter(writer);
 
-            writer.write(userInput + " ");
+            writer.write(userInput + ",");
             writer.write("\n");
             System.out.println();
 
@@ -90,4 +87,26 @@ public class TextFileReader {
             e.printStackTrace();
         }
     }
+
+    public void fileWriter(ArrayList<Book> catalogue) {
+        try {
+            //If the test.txt file does not exist, FileWriter will create it
+            FileWriter fileWriter = new FileWriter("catalogue.txt", false);
+            //BufferedWriter buffWriter = new BufferedWriter(writer);
+
+
+            for (int i = 0; i < catalogue.size(); i++) {
+                fileWriter.write(catalogue.get(i).toFileFormat() + "\n");
+            }
+
+            fileWriter.close();
+            //buffWriter.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 }

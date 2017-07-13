@@ -1,11 +1,14 @@
+/*
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+*/
 /**
  * Created by jenny on 7/12/2017.
- */
+ *//*
+
 public class BookAdder extends CatalogueTextFile{
     public void addBook() {
         Scanner scnr = new Scanner(System.in);
@@ -41,8 +44,6 @@ public class BookAdder extends CatalogueTextFile{
         System.out.println("What is the book genre?");
         genre = scnr.nextLine();
 
-
-
         Book book1 = new Book(title, author, dueDate1, braille, Status.getEnumVersion(status), Genre.getEnumVersion(genre));
         writeToCatalogue(book1.getTitle() + " " + book1.getAuthor() + " " + book1.getDueDate() + " " + book1.getBraille() + " " + book1.getStatus() + " " + book1.getGenre());
         readFromCatalogue();
@@ -50,3 +51,4 @@ public class BookAdder extends CatalogueTextFile{
 
     }
 }
+*/

@@ -53,7 +53,7 @@ public class SearchImplementation {
     }
 
     public void attributeSearch(ArrayList<Book> catalogue, int attributeSelection, String searchString) {
-        String attribute;
+        String attribute = null;
 
 //If Contains:
         //Find titles containing the entered search word and print list to console:
@@ -63,7 +63,9 @@ public class SearchImplementation {
             } else if (attributeSelection == 2) {
                 attribute = book.getAuthor();
             } else if (attributeSelection == 3) {
+                System.out.println(book.getGenre());
                 attribute = book.getGenre().toString();
+
             } else {
                 attribute = book.getTitle(); //FIXME - default to what?
             }

@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * Created by jenny on 7/12/2017.
  */
-public class CheckoutMain extends CatalogueTextFile{
+public class Book extends CatalogueTextFile{
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
 

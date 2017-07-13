@@ -1,2 +1,0 @@
-Harry   Lupe   12/8/2015   false   Reserved   null
-Lolo   Lele   7/7/2008   false   Reserved   Non-Fiction

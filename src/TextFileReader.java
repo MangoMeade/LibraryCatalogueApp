@@ -28,7 +28,7 @@ public class TextFileReader {
 
             while ((line = buffReader.readLine()) != null) {
 
-                String[] bookAttributes = line.split("   "); //FIXME: regex of choice
+                String[] bookAttributes = line.split(","); //FIXME: regex of choice
 
                 catalogue.add(convertToBook(bookAttributes));
 
@@ -50,7 +50,6 @@ public class TextFileReader {
         Book book = new Book();
         SimpleDateFormat formatter1=new SimpleDateFormat("MM/dd/yyyy");
         Date dueDate = new Date();
-        //System.out.println(bookAttributes[3]);
         try {
             dueDate = formatter1.parse(bookAttributes[2]);
         } catch (ParseException e) {

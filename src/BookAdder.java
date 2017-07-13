@@ -26,10 +26,10 @@ public class BookAdder extends CatalogueTextFile{
         title = scnr.nextLine();
         System.out.println("Book author?");
         author = scnr.nextLine();
-        System.out.println("Due Date?");
-        dueDate = scnr.nextLine();
+        //System.out.println("Due Date?");
+        //dueDate = scnr.nextLine();
         try {
-            dueDate1 = formatter1.parse(dueDate);
+            dueDate1 = formatter1.parse("1/1/1");
         } catch (ParseException e) {
             e.printStackTrace();
         }

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 /**
  * Created by jenny on 7/13/2017.
@@ -54,6 +55,7 @@ public class SearchImplementation {
 
     public void attributeSearch(ArrayList<Book> catalogue, int attributeSelection, String searchString) {
         String attribute;
+        ArrayList<Book> fulfilledCriteria = new ArrayList<>();
 
 //If Contains:
         //Find titles containing the entered search word and print list to console:
@@ -69,8 +71,10 @@ public class SearchImplementation {
             }
             if (containsIgnoreCase(attribute, searchString)) {
                 System.out.println(book);
+                fulfilledCriteria.add(book);
             }
         }
+        checkoutImplementation(fulfilledCriteria);
     }
 
     public boolean containsIgnoreCase(String str, String searchStr) {
@@ -87,4 +91,26 @@ public class SearchImplementation {
         return false;
     }
 
+    public Book checkoutImplementation(ArrayList<Book> fulfilledCriteria) {
+        String userInput = "";
+        Scanner scnr = new Scanner(System.in);
+        System.out.println("Would you like to checkout a book?");
+        userInput = scnr.nextLine();
+        HashMap<Integer, Book> attributeMenu = new HashMap<>();
+        if (userInput.equalsIgnoreCase("yes")) {
+            for (int i = 0; i < fulfilledCriteria.size(); i++) {
+                attributeMenu.put(i + 1, fulfilledCriteria.get(i));
+            }
+
+        }
+        System.out.println("Search Book (Select Attribute to Search by):");
+
+        for (HashMap.Entry<Integer, Book> option : attributeMenu.entrySet()) {
+            System.out.printf("%d - %s\n", option.getKey(), option.getValue());
+        }
+
+        int attributeSelection = Validator.getInt("Please enter a number from the Search Menu above: ", "Please enter a valid menu number: ", 1, attributeMenu.size());
+
+        return null;
+    }
 }

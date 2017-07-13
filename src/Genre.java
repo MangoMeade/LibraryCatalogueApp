@@ -2,7 +2,7 @@
  * Created by jenny on 7/12/2017.
  */
 public enum Genre {
-    FICTION("Fiction"), NONFICTION("Non-Fiction"), HISTORICAL("Historical");
+    FICTION("Fiction"), NONFICTION("Nonfiction"), HISTORICAL("Historical");
 
     private String stringVersion;
 
@@ -13,14 +13,14 @@ public enum Genre {
     public static Genre getEnumVersion(String stat){
         Genre result = null;
         switch (stat){
-            case "Non-Fiction":
-                result = Genre.FICTION;
-                break;
-            case "Historical":
+            case "Nonfiction":
                 result = Genre.NONFICTION;
                 break;
-            case "Fiction":
+            case "Historical":
                 result = Genre.HISTORICAL;
+                break;
+            case "Fiction":
+                result = Genre.FICTION;
                 break;
             default:
                 break;

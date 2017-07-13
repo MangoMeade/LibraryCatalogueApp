@@ -13,7 +13,16 @@ public class ReturnImplementation {
         int returnSelection;
 
         LibraryImplementation libraryImpl = new LibraryImplementation();
-        libraryImpl.printCatalogue(catalogue);
+        ArrayList<Book> printCatalogue = new ArrayList<>();
+
+
+        for (Book book: catalogue) {
+            if (book.getStatus()==Status.CHECKED_OUT){
+              printCatalogue.add(book);
+            }
+
+        }
+        libraryImpl.printCatalogue(printCatalogue);
 
         returnSelection = Validator.getInt("Which book would you like to return? (Please enter the line number): ", "Please enter a valid line number: ", 1, 12);
 

@@ -51,8 +51,7 @@ public class TextFileReaderWriter {
 
         Book book = new Book();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
-        System.out.println(bookAttributes[2]);
-        LocalDate dueDate = LocalDate.parse("12/08/2015", formatter);
+        LocalDate dueDate = LocalDate.parse(bookAttributes[2], formatter);
         Boolean braille = new Boolean(bookAttributes[3]);
 
         book.setTitle(bookAttributes[0]);

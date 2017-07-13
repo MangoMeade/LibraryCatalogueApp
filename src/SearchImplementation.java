@@ -29,7 +29,7 @@ public class SearchImplementation {
 
             attributeSelection = attributeSelection();
 
-            if (attributeSelection != 7) {
+            if (attributeSelection != 4) {
 
                 System.out.println();
                 String searchString = (Validator.getString("Please enter a word to search by: "));

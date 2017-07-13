@@ -82,12 +82,12 @@ public class Book {
 
     @Override
     public String toString() {
-        return title + "  " + author + "  " + braille + "  " + status + "  " + genre + "  " + dueDate;
+        return title + "  " + author + "  " + braille + "  " + status + "  " + dueDate + "  " + genre;
 
     }
 
     public String toFileFormat() {
-        return title + "," + author + "," + braille + "," + status + "," + genre + "," + dueDate;
+        return title + "  " + author + "  " + braille + "  " + status + "  " + dueDate + "  " + genre;
 
     }
 }

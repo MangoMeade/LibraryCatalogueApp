@@ -41,8 +41,8 @@ public class LibraryImplementation {
                 ReturnImplementation returnImpl = new ReturnImplementation();
                 returnImpl.runReturnLoop(catalogue);
             } else if (menuSelection == 5) {
-                /*BookAdder adder = new BookAdder();
-                adder.addBook();*/
+                BookAdder adder = new BookAdder();
+                adder.addBook();
             }
             if (menuSelection == 6) {
                 TextFileReaderWriter fileWriter = new TextFileReaderWriter();
@@ -66,14 +66,18 @@ public class LibraryImplementation {
         return menuSelection;
     }
 
-    public void printCatalogue(ArrayList<Book> catalogue) {
+    public void printCatalogue(ArrayList<Book> consoleCatalogue) {
         System.out.println("\nCurrent catalogue...");
 
         int i = 1;
 
-        for (Book book : catalogue) {
-            System.out.println(i + " " + book);
+        for (Book book : consoleCatalogue) {
+            System.out.print(i + " " + book.getTitle() + " " + book.getAuthor() + " " + book.getBraille() + " " + book.getStatus() + " " + book.getGenre());
             i = i + 1;
+            if (book.getStatus()==Status.CHECKED_OUT){
+                System.out.print(" " + book.getDueDate());
+            }
+            System.out.println();
         }
         System.out.println();
     }

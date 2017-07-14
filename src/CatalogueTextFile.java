@@ -5,13 +5,6 @@ import java.io.*;
  */
 public class CatalogueTextFile {
 
-//    public static void updateCatalogue() {
-//
-//        readFromCatalogue();
-//
-//        writeToCatalogue();
-//    }
-
 
     public static void readFromCatalogue() {
         try {

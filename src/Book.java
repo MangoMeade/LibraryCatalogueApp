@@ -100,6 +100,9 @@ public class Book {
 
     public String toCheckoutFormat() {
         return title + " " + author + " " + genre + " " + braille + " " + status + " " + dueDate;
-
     }
+
+//    public String toFileFormat() {
+//        return title + "," + author + "," + dueDate + "," + braille + "," + status + "," + genre);
+//    }
 }

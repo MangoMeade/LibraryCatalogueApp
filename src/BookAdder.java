@@ -14,7 +14,7 @@ public class BookAdder extends CatalogueTextFile{
         Genre fiction = Genre.FICTION;
         String title;
         String author;
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
         LocalDate dueDate = LocalDate.now();
         Boolean braille;
         String status;
@@ -32,7 +32,12 @@ public class BookAdder extends CatalogueTextFile{
         genre = scnr.nextLine();
 
         Book book1 = new Book(title, author, dueDate, braille, Status.ON_SHELF, Genre.getEnumVersion(genre));
-        writeToCatalogue(book1.getTitle() + "," + book1.getAuthor() + "," + book1.getDueDate() + "," + book1.getBraille() + "," + book1.getStatus() + "," + book1.getGenre());
+        //writeToCatalogue(book1.getTitle() + "," + book1.getAuthor() + "," + book1.getDueDate() + "," + book1.getBraille() + "," + book1.getStatus() + "," + book1.getGenre());
+
+        TextFileReaderWriter fileWriter = new TextFileReaderWriter();
+        fileWriter.fileWriter(book1);
+
+
         readFromCatalogue();
 
     }

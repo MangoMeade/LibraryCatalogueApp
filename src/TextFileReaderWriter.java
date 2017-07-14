@@ -48,8 +48,7 @@ public class TextFileReaderWriter {
 
         book.setAuthor(bookAttributes[1]);
 
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate dueDate = LocalDate.parse(bookAttributes[2], formatter);
         book.setDueDate(dueDate);
 
@@ -99,6 +98,18 @@ public class TextFileReaderWriter {
         }
     }
 
+    public void fileWriter(Book book) {
+        try {
+            //If the test.txt file does not exist, FileWriter will create it
+            FileWriter fileWriter = new FileWriter("catalogue.txt", false);
 
+            fileWriter.write(book.toFileFormat() + "\n");
+
+            fileWriter.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

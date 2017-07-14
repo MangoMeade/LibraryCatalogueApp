@@ -95,4 +95,16 @@ public class TextFileReaderWriter {
         }
     }
 
+/*    public int getColumnWidths(ArrayList<Book> catalogue) {
+        int maxLength = catalogue.get(0).getTitle().length();
+
+        for (Book book : catalogue) {
+
+            if (book.getTitle().length() > maxLength) {
+                maxLength = book.getTitle().length();
+            }
+
+        }
+        return maxLength;
+    }*/
 }

@@ -16,7 +16,7 @@ public class SearchImplementation {
 
         attributeMenu.put(1, "Title");
         attributeMenu.put(2, "Author");
-        attributeMenu.put(3, "Genre");
+        attributeMenu.put(3, "Genre: Drama, Fiction, Nonfiction, Historical, Biographical");
         attributeMenu.put(4, "Return to Main Menu");
 
         final int SEARCH_MAX_ENTRY = attributeMenu.size();
@@ -79,10 +79,12 @@ public class SearchImplementation {
             System.out.println("\n" + match + " matches found.");
         }
 
-        System.out.println();
-        if ((Validator.getString("Would you like to checkout one of these books? (y/n)").equalsIgnoreCase("y"))) {
-            CheckoutImplementation checkoutImpl = new CheckoutImplementation();
-            checkoutImpl.runCheckoutLoop(catalogue);
+        if (match != 0) {
+            System.out.println();
+            if ((Validator.getString("Would you like to checkout one of these books? (y/n)").equalsIgnoreCase("y"))) {
+                CheckoutImplementation checkoutImpl = new CheckoutImplementation();
+                checkoutImpl.runCheckoutLoop(catalogue);
+            }
         }
     }
 

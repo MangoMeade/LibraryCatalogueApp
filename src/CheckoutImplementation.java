@@ -12,9 +12,7 @@ public class CheckoutImplementation {
 
         int checkoutSelection;
 
-        LibraryImplementation libraryImpl = new LibraryImplementation();
-        libraryImpl.printCatalogue(catalogue);
-
+        System.out.println();
         checkoutSelection = Validator.getInt("Which book would you like to checkout? (Please enter the line number): ", "Please enter a valid line number: ", 1, catalogue.size());
 
         if(catalogue.get(checkoutSelection - 1).getStatus() == Status.ON_SHELF){

@@ -56,43 +56,61 @@ public class SearchImplementation {
     }
 
     public void attributeSearch(ArrayList<Book> catalogue, int attributeSelection, String searchString) {
-        int match = 0;
 
         System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
         System.out.println("Here are the results of your search...");
         System.out.printf("----------------------------------------------------------------------------------------------------\n\n");
 
+        HashMap<Integer, Book> bookIndex = new HashMap<>();
+        int match = 0;
         for (Book book : catalogue) {
             if (attributeSelection == 1) {
-                match = checkContains(book, book.getTitle(), searchString, match);
+                match = checkContains(book, book.getTitle(), searchString, match, catalogue);
             } else if (attributeSelection == 2) {
-                match = checkContains(book, book.getAuthor(), searchString, match);
+                match = checkContains(book, book.getAuthor(), searchString, match, catalogue);
             } else if (attributeSelection == 3) {
-                match = checkEquals(book, book.getGenre().toString(), searchString, match);
+                match = checkEquals(book, book.getGenre().toString(), searchString, match, catalogue);
             }
         }
+
         if (match == 1) {
             System.out.println("\n" + match + " match found.");
         } else {
             System.out.println("\n" + match + " matches found.");
         }
+
+        System.out.println();
+        if ((Validator.getString("Would you like to checkout one of these books? (y/n)").equalsIgnoreCase("y"))) {
+            CheckoutImplementation checkoutImpl = new CheckoutImplementation();
+            checkoutImpl.runCheckoutLoop(catalogue);
+        } else {
+            System.out.println("\nReturning to Main Menu.");
+            LibraryImplementation implementation = new LibraryImplementation();
+            implementation.runMainLoop(catalogue);
+        }
+
     }
 
     //Print to console any books with title or author that contain the search string:
-    public int checkContains(Book book, String attribute, String searchString, int match) {
+    public int checkContains(Book book, String attribute, String searchString, int match, ArrayList catalogue) {
+
         if (containsIgnoreCase(attribute, searchString)) {
-            System.out.println(book.toConsoleFormat());
+            System.out.println((catalogue.indexOf(book) + 1) + " " + book.toConsoleFormat());
             match = match + 1;
         }
+
         return match;
     }
 
     //Print to console any books with genre that equals the search string:
-    public int checkEquals(Book book, String attribute, String searchString, int match) {
+    public int checkEquals(Book book, String attribute, String searchString, int match, ArrayList catalogue) {
+
         if (attribute.equalsIgnoreCase(searchString)) {
-            System.out.println(book.toConsoleFormat());
+            System.out.println((catalogue.indexOf(book) + 1) + book.toConsoleFormat());
             match = match + 1;
         }
+
+
         return match;
     }
 

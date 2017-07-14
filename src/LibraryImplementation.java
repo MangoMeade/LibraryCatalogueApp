@@ -21,7 +21,8 @@ public class LibraryImplementation {
         menu.put(6, "Exit");
 
         do {
-            System.out.println("Main Menu:");
+            System.out.printf("----------------------------------------------------------------------------------------------------\n");
+            System.out.println("Main Menu: Which action would you like to perform?");
             for (HashMap.Entry<Integer, String> option : menu.entrySet()) {
                 System.out.printf("%d - %s\n", option.getKey(), option.getValue());
             }
@@ -72,7 +73,7 @@ public class LibraryImplementation {
         int i = 1;
 
         for (Book book : consoleCatalogue) {
-            System.out.print(i + " " + book.getTitle() + " " + book.getAuthor() + " " + book.getBraille() + " " + book.getStatus() + " " + book.getGenre());
+            System.out.print(i + " " + book.getTitle() + " " + book.getAuthor() + " " + book.getGenre() + " " + book.getBraille() + " " + book.getStatus());
             i = i + 1;
             if (book.getStatus()==Status.CHECKED_OUT){
                 System.out.print(" " + book.getDueDate());

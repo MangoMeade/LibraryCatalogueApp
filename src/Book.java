@@ -87,7 +87,11 @@ public class Book {
     }
 
     public String toFileFormat() {
-        return title + "  " + author + "  " + braille + "  " + status + "  " + dueDate + "  " + genre;
+        return title + "," + author + "," + braille + "," + status + "," + dueDate + "," + genre;
 
+    }
+
+    public String toConsoleFormat() {
+        return title + " " + author + " " + genre + " " + braille + " " + status;
     }
 }

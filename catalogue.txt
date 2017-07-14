@@ -10,4 +10,3 @@ Catching Fire,Suzanne Collings,07/12/2017,True,Reserved,Fiction
 A Clash of Kings,George RR Martin,07/12/2017,False,Reserved,Fiction
 Hamlett,Shakespeare,07/12/2017,True,Reserved,Fiction
 I am Malala,Malala Yousafzai,07/12/2017,False,Reserved,Nonfiction
-Bible God 2017-07-13 true On Shelf Fiction  

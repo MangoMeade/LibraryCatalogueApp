@@ -21,6 +21,7 @@ public class SearchImplementation {
 
         do {
             System.out.println();
+            System.out.printf("----------------------------------------------------------------------------------------------------\n");
             System.out.println("Search Menu (Select Attribute to Search by):");
 
             for (HashMap.Entry<Integer, String> option : attributeMenu.entrySet()) {
@@ -65,12 +66,11 @@ public class SearchImplementation {
             } else if (attributeSelection == 3) {
                 System.out.println(book.getGenre());
                 attribute = book.getGenre().toString();
-
             } else {
-                attribute = book.getTitle(); //FIXME - default to what?
+                attribute = book.getTitle();
             }
             if (containsIgnoreCase(attribute, searchString)) {
-                System.out.println(book);
+                System.out.println(book.toConsoleFormat());
             }
         }
     }

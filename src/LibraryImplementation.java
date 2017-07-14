@@ -17,7 +17,7 @@ public class LibraryImplementation {
         menu.put(2, "Search for a book");
         menu.put(3, "Checkout a book");
         menu.put(4, "Return a book");
-        menu.put(5, "Add a book"); //FIXME: Only Library Personnel?
+        menu.put(5, "Library Catalogue Maintenance [Library Personnel Only]");
         menu.put(6, "Exit");
 
         final int MAX_ENTRY = menu.size();
@@ -45,8 +45,12 @@ public class LibraryImplementation {
                 ReturnImplementation returnImpl = new ReturnImplementation();
                 returnImpl.runReturnLoop(catalogue);
             } else if (menuSelection == 5) {
-                BookAdder adder = new BookAdder();
-                adder.addBook();
+                if(Validator.getInt("Please enter password: ") == 1234) {
+                    BookAdder adder = new BookAdder();
+                    adder.addBook();
+                } else {
+                    System.out.println("Sorry, you are not authorized to perform this function.");
+                }
             }
             if (menuSelection == MAX_ENTRY) {
                 TextFileReaderWriter fileWriter = new TextFileReaderWriter();

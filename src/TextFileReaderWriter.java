@@ -49,7 +49,7 @@ public class TextFileReaderWriter {
         book.setAuthor(bookAttributes[1]);
 
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate dueDate = LocalDate.parse(bookAttributes[2], formatter);
         book.setDueDate(dueDate);
 
@@ -69,9 +69,7 @@ public class TextFileReaderWriter {
             //If the test.txt file does not exist, FileWriter will create it
             FileWriter writer = new FileWriter("catalogue.txt", true);
 
-            writer.write(userInput + ",");
-            writer.write("\n");
-            System.out.println();
+            writer.write( "\n" + userInput + ",");
 
             //To add a book:
             //writer.write("\n" + Validator.getString("Enter book title: "));

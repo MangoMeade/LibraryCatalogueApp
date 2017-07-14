@@ -1,12 +1,48 @@
-Moo Ba Lalala,Sandra Boynton,12/08/2015,true,Reserved,Fiction
-Finding London,Ellie Wade,07/07/2008,false,Reserved,Fiction
-Hunger Games,Suzanne Collings,07/12/2017,true,Reserved,Fiction
-A Song of Fire and Ice, George R.R. Martin,7/12/2017,False,fiction
-Romeo and Juliet,Shakespeare,07/12/2017,true,Reserved,Fiction
-How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg, 07/12/2017,true,Reserved, Non-fiction
-Blue Hat Green Hat,Sandra Boynton,07/12/2017,True,Reserved,Fiction
-Keeping London,Ellie Wade,07/12/2017,False,Reserved,Romance
-Catching Fire,Suzanne Collings,07/12/2017,True,Reserved,Fiction
-A Clash of Kings,George RR Martin,07/12/17,False,Reserved,Fiction
-Hamlett,Shakespeare,07/12/17,True,Reserved,Fiction
-I am Malala,Malala Yousafzai,07/12/2017,False,Reserved,Non-fiction
+Moo Ba Lalala,Sandra Boynton,07/17/2017,true,Checked Out,Fiction
+Finding London,Ellie Wade,07/07/2017,false,On Shelf,Fiction
+Hunger Games,Suzanne Collings,07/19/2017,true,Checked Out,Fiction
+A Song of Fire and Ice, George R.R. Martin,07/12/2017,false,On Shelf,Fiction
+Romeo and Juliet,Shakespeare,07/27/2017,true,Reserved,Fiction
+How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/08/2017,true,On Shelf,Nonfiction
+Blue Hat Green Hat,Sandra Boynton,07/27/2017,true,Reserved,Fiction
+Keeping London,Ellie Wade,07/02/2017,false,On Shelf,Fiction
+Catching Fire,Suzanne Collings,06/20/2017,true,On Shelf,Fiction
+A Clash of Kings,George RR Martin,07/12/2017,false,On Shelf,Fiction
+Hamlett,Shakespeare,07/12/2017,true,On Shelf,Fiction
+I am Malala,Malala Yousafzai,07/27/2017,false,Reserved,Historical
+Moo Ba Lalala,Sandra Boynton,07/17/2017,true,Checked Out,Fiction
+Finding London,Ellie Wade,07/07/2017,false,On Shelf,Fiction
+Hunger Games,Suzanne Collings,07/19/2017,true,Checked Out,Fiction
+A Song of Fire and Ice, George R.R. Martin,07/12/2017,false,On Shelf,Fiction
+Romeo and Juliet,Shakespeare,07/27/2017,true,Reserved,Fiction
+How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/08/2017,true,On Shelf,Nonfiction
+Blue Hat Green Hat,Sandra Boynton,07/27/2017,true,Reserved,Fiction
+Keeping London,Ellie Wade,07/02/2017,false,On Shelf,Fiction
+Catching Fire,Suzanne Collings,06/20/2017,true,On Shelf,Fiction
+A Clash of Kings,George RR Martin,07/12/2017,false,On Shelf,Fiction
+Hamlett,Shakespeare,07/12/2017,true,On Shelf,Fiction
+I am Malala,Malala Yousafzai,07/27/2017,false,Reserved,Historical
+Harry Potter and the Order of Phoenix,JK Rowling,07/27/2017,false,Checked Out,Fiction
+Finding London,Ellie Wade,07/07/2017,false,On Shelf,Fiction
+Hunger Games,Suzanne Collings,07/19/2017,true,Checked Out,Fiction
+A Song of Fire and Ice, George R.R. Martin,07/12/2017,false,On Shelf,Fiction
+Romeo and Juliet,Shakespeare,07/27/2017,true,Reserved,Fiction
+How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/08/2017,true,On Shelf,Nonfiction
+Blue Hat Green Hat,Sandra Boynton,07/27/2017,true,Reserved,Fiction
+Keeping London,Ellie Wade,07/02/2017,false,On Shelf,Fiction
+Catching Fire,Suzanne Collings,06/20/2017,true,On Shelf,Fiction
+A Clash of Kings,George RR Martin,07/12/2017,false,On Shelf,Fiction
+Hamlett,Shakespeare,07/12/2017,true,On Shelf,Fiction
+I am Malala,Malala Yousafzai,07/27/2017,false,Reserved,Historical
+Moo Ba Lalala,Sandra Boynton,07/17/2017,true,Checked Out,Fiction
+Finding London,Ellie Wade,07/07/2017,false,On Shelf,Fiction
+Hunger Games,Suzanne Collings,07/19/2017,true,Checked Out,Fiction
+A Song of Fire and Ice, George R.R. Martin,07/12/2017,false,On Shelf,Fiction
+Romeo and Juliet,Shakespeare,07/27/2017,true,Reserved,Fiction
+How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/08/2017,true,On Shelf,Nonfiction
+Blue Hat Green Hat,Sandra Boynton,07/27/2017,true,Reserved,Fiction
+Keeping London,Ellie Wade,07/02/2017,false,On Shelf,Fiction
+Catching Fire,Suzanne Collings,06/20/2017,true,On Shelf,Fiction
+A Clash of Kings,George RR Martin,07/12/2017,false,On Shelf,Fiction
+Hamlett,Shakespeare,07/12/2017,true,On Shelf,Fiction
+I am Malala,Malala Yousafzai,07/27/2017,false,Reserved,Historical

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 //FIXME: After 7 (Return to Main Menu), 5 does not exit on the first attempt
 
 //Console program to search library catalog and reserve books
-public class LibraryCatalogueAppMain {
+public class LibraryCatalogueApp {
 
     private Validator Validator = new Validator();
 

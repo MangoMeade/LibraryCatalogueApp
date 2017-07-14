@@ -78,7 +78,6 @@ public class Book {
 /*    @Override
     public String toString() {
         return "Title: " + title + "   Author: " + author + "   Braille: " + braille + "   Status: " + status + "   Genre: " + genre + "   Previous Due Date: " + dueDate;
-
     }*/
 
     @Override

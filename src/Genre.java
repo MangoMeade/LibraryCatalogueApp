@@ -2,7 +2,7 @@
  * Created by jenny on 7/12/2017.
  */
 public enum Genre {
-    FICTION("Fiction"), NONFICTION("Nonfiction"), HISTORICAL("Historical");
+    FICTION("Fiction"), NONFICTION("Nonfiction"), HISTORICAL("Historical"), DRAMA("Drama"), BIOGRAPHICAL("Biographical"), ;
 
     private String stringVersion;
 
@@ -21,6 +21,12 @@ public enum Genre {
                 break;
             case "Fiction":
                 result = Genre.FICTION;
+                break;
+            case "Drama":
+                result = Genre.DRAMA;
+                break;
+            case "Biographical":
+                result = Genre.BIOGRAPHICAL;
                 break;
             default:
                 break;

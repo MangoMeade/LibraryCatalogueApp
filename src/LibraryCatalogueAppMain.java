@@ -19,10 +19,12 @@ public class LibraryCatalogueAppMain {
 
     public static void intro() {
 
-        System.out.println("Welcome to the Barely Books Library Terminal:\nThere are 12 books in the library.\n");
+        System.out.println("Welcome to the Barely Books Library Terminal:");
 
         TextFileReaderWriter reader = new TextFileReaderWriter();
         ArrayList<Book> catalogue = reader.readFromCatalogue();
+
+        System.out.printf("There are " + catalogue.size() + " books in the library.\n\n");
 
         LibraryImplementation implementation = new LibraryImplementation();
         implementation.runMainLoop(catalogue);

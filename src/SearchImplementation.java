@@ -22,8 +22,7 @@ public class SearchImplementation {
         final int MAX_ENTRY = attributeMenu.size();
 
         do {
-            System.out.println();
-            System.out.printf("----------------------------------------------------------------------------------------------------\n");
+            System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
             System.out.println("Search Menu (Select Attribute to Search by):");
             System.out.printf("----------------------------------------------------------------------------------------------------\n");
 
@@ -59,10 +58,9 @@ public class SearchImplementation {
     public void attributeSearch(ArrayList<Book> catalogue, int attributeSelection, String searchString) {
         int match = 0;
 
-        System.out.println();
-        System.out.printf("----------------------------------------------------------------------------------------------------\n");
+        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
         System.out.println("Here are the results of your search...");
-        System.out.printf("----------------------------------------------------------------------------------------------------\n");
+        System.out.printf("----------------------------------------------------------------------------------------------------\n\n");
 
         for (Book book : catalogue) {
             if (attributeSelection == 1) {

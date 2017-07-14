@@ -18,11 +18,12 @@ public class CheckoutImplementation {
         checkoutSelection = Validator.getInt("Which book would you like to checkout? (Please enter the line number): ", "Please enter a valid line number: ", 1, catalogue.size());
 
         if(catalogue.get(checkoutSelection - 1).getStatus() == Status.ON_SHELF){
+            System.out.println("\nCheckout successful...\n");
             dueDateCreation(catalogue.get(checkoutSelection - 1));
             System.out.println();
-            System.out.println("Please stop by the circulation desk to pick up your book.");
+            System.out.println("Please stop by the circulation desk to pick up your book.\n");
         } else {
-            System.out.println("Sorry that book is no longer available.");
+            System.out.println("\nSorry that book is no longer available. Returning to Main Menu.\n");
         }
 
     }

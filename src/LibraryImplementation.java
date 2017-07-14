@@ -39,7 +39,6 @@ public class LibraryImplementation {
                 SearchImplementation searchImpl = new SearchImplementation();
                 searchImpl.runSelectionLoop(catalogue); //Search for a book
             } else if (menuSelection == 3) {
-                printCatalogue(catalogue);//Display entire list of books
                 CheckoutImplementation checkoutImpl = new CheckoutImplementation();
                 checkoutImpl.runCheckoutLoop(catalogue);
             } else if (menuSelection == 4) {

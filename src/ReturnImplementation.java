@@ -13,17 +13,17 @@ public class ReturnImplementation {
         int returnSelection;
 
         LibraryImplementation libraryImpl = new LibraryImplementation();
-        ArrayList<Book> printCatalogue = new ArrayList<>();
+        ArrayList<Book> checkedoutCatalogue = new ArrayList<>();
 
         for (Book book: catalogue) {
             if (book.getStatus()==Status.CHECKED_OUT){
-              printCatalogue.add(book);
+                checkedoutCatalogue.add(book);
             }
         }
 
-        libraryImpl.printCatalogue(printCatalogue);
+        libraryImpl.printCatalogue(checkedoutCatalogue);
 
-        returnSelection = Validator.getInt("Which book would you like to return? (Please enter the line number): ", "Please enter a valid line number: ", 1, printCatalogue.size());
+        returnSelection = Validator.getInt("Which book would you like to return? (Please enter the line number): ", "Please enter a valid line number: ", 1, checkedoutCatalogue.size());
 
         returnToShelf(catalogue.get(returnSelection - 1));
 

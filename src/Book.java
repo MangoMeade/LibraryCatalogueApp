@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -87,8 +88,11 @@ public class Book {
     }
 
     public String toFileFormat() {
-        return title + "," + author + "," + braille + "," + status + "," + dueDate + "," + genre;
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        String formattedString = dueDate.format(formatter);
+
+        return title + "," + author + "," + formattedString + "," + braille + "," + status + "," + genre;
     }
 
     public String toConsoleFormat() {

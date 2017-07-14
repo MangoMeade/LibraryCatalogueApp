@@ -15,32 +15,25 @@ public class ReturnImplementation {
         LibraryImplementation libraryImpl = new LibraryImplementation();
         ArrayList<Book> printCatalogue = new ArrayList<>();
 
-
         for (Book book: catalogue) {
             if (book.getStatus()==Status.CHECKED_OUT){
               printCatalogue.add(book);
             }
-
         }
+
         libraryImpl.printCatalogue(printCatalogue);
 
-        returnSelection = Validator.getInt("Which book would you like to return? (Please enter the line number): ", "Please enter a valid line number: ", 1, 12);
+        returnSelection = Validator.getInt("Which book would you like to return? (Please enter the line number): ", "Please enter a valid line number: ", 1, printCatalogue.size());
 
-        if(catalogue.get(returnSelection - 1).getStatus() == Status.CHECKED_OUT){
-            dueDateCreation(catalogue.get(returnSelection - 1));
-            System.out.println();
-        } else if (catalogue.get(returnSelection - 1).getStatus() == Status.CHECKED_OUT) {
-            System.out.println("Sorry that book is no longer available.");
-        }
+        returnToShelf(catalogue.get(returnSelection - 1));
 
+        System.out.println("\nThank you. Your book was successfully returned! Returning to Main Menu.\n");
     }
 
-    public void dueDateCreation(Book returnedBook) {
+    public void returnToShelf(Book returnedBook) {
 
-        returnedBook.setDueDate(LocalDate.now().plusWeeks(2));
         returnedBook.setStatus(Status.ON_SHELF);
-
-        System.out.println(returnedBook);
+        System.out.println("\n" + returnedBook.toConsoleFormat());
 
     }
 

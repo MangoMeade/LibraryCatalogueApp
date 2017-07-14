@@ -19,7 +19,7 @@ public class SearchImplementation {
         attributeMenu.put(3, "Genre");
         attributeMenu.put(4, "Return to Main Menu");
 
-        final int MAX_ENTRY = attributeMenu.size();
+        final int SEARCH_MAX_ENTRY = attributeMenu.size();
 
         do {
             System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
@@ -30,9 +30,9 @@ public class SearchImplementation {
                 System.out.printf("%d - %s\n", option.getKey(), option.getValue());
             }
 
-            attributeSelection = attributeSelection(MAX_ENTRY);
+            attributeSelection = attributeSelection(SEARCH_MAX_ENTRY);
 
-            if (attributeSelection != MAX_ENTRY) {
+            if (attributeSelection != SEARCH_MAX_ENTRY) {
 
                 System.out.println();
                 String searchString = (Validator.getString("Please enter a word to search by: "));
@@ -40,10 +40,10 @@ public class SearchImplementation {
                 attributeSearch(catalogue, attributeSelection, searchString);
             }
 
-        } while (attributeSelection != MAX_ENTRY);
+        } while (attributeSelection != SEARCH_MAX_ENTRY);
 
-        LibraryImplementation implementation = new LibraryImplementation();
-        implementation.runMainLoop(catalogue);
+        //LibraryImplementation implementation = new LibraryImplementation();
+        //implementation.runMainLoop(catalogue);
     }
 
     public int attributeSelection(int MAX_ENTRY) {
@@ -83,12 +83,7 @@ public class SearchImplementation {
         if ((Validator.getString("Would you like to checkout one of these books? (y/n)").equalsIgnoreCase("y"))) {
             CheckoutImplementation checkoutImpl = new CheckoutImplementation();
             checkoutImpl.runCheckoutLoop(catalogue);
-        } else {
-            System.out.println("\nReturning to Main Menu.");
-            LibraryImplementation implementation = new LibraryImplementation();
-            implementation.runMainLoop(catalogue);
         }
-
     }
 
     //Print to console any books with title or author that contain the search string:

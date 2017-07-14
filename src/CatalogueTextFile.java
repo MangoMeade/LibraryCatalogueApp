@@ -34,7 +34,7 @@ public class CatalogueTextFile {
     public static void writeToCatalogue(String userInput) {
         try {
             //If the test.txt file does not exist, FileWriter will create it
-            FileWriter writer = new FileWriter("catalogue.txt", true);
+            FileWriter writer = new FileWriter("catalogue.txt", false);
             //BufferedWriter buffWriter = new BufferedWriter(writer);
             writer.write(userInput + "  ");
             writer.write("\n");

@@ -4,8 +4,6 @@ import java.util.ArrayList;
  * Created by jenny on 7/12/2017.
  */
 
-//FIXME: After 7 (Return to Main Menu), 5 does not exit on the first attempt
-
 //Console program to search library catalog and reserve books
 public class LibraryCatalogueApp {
 
@@ -13,14 +11,15 @@ public class LibraryCatalogueApp {
 
     public static void main(String[] args) {
 
-        intro();
+        startAndEnd();
 
     }
 
-    public static void intro() {
+    public static void startAndEnd() {
 
         System.out.println("Welcome to the Barely Books Library Terminal:");
 
+        //Read catalogue of books from file upon start
         TextFileReaderWriter reader = new TextFileReaderWriter();
         ArrayList<Book> catalogue = reader.readFromCatalogue();
 

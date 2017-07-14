@@ -37,7 +37,6 @@ public class BookAdder extends CatalogueTextFile{
         TextFileReaderWriter fileWriter = new TextFileReaderWriter();
         fileWriter.fileWriter(book1);
 
-
         readFromCatalogue();
 
     }

@@ -1,15 +1,14 @@
 import java.io.*;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.time.format.DateTimeFormatter;
 
 /**
  * Created by jenny on 7/12/2017.
  */
 public class TextFileReaderWriter {
+
+    //Read from file functions:
 
     public ArrayList<Book> readFromCatalogue() {
 
@@ -62,36 +61,19 @@ public class TextFileReaderWriter {
         return book;
     }
 
-
-    public void writeToCatalogue(String userInput) {
-        try {
-            //If the test.txt file does not exist, FileWriter will create it
-            FileWriter writer = new FileWriter("catalogue.txt", true);
-
-            writer.write( "\n" + userInput + ",");
-
-            //To add a book:
-            //writer.write("\n" + Validator.getString("Enter book title: "));
-            System.out.println("This book has been saved!\n");
-
-            writer.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    //Write to file functions:
 
     public void fileWriter(ArrayList<Book> catalogue) {
         try {
             //If the test.txt file does not exist, FileWriter will create it
-            FileWriter fileWriter = new FileWriter("catalogue.txt", false);
+            FileWriter catalogueFileWriter = new FileWriter("catalogue.txt", true);
 
 
             for (int i = 0; i < catalogue.size(); i++) {
-                fileWriter.write(catalogue.get(i).toFileFormat() + "\n");
+                catalogueFileWriter.write(catalogue.get(i).toFileFormat() + "\n");
             }
 
-            fileWriter.close();
+            catalogueFileWriter.close();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -100,12 +82,11 @@ public class TextFileReaderWriter {
 
     public void fileWriter(Book book) {
         try {
-            //If the test.txt file does not exist, FileWriter will create it
-            FileWriter fileWriter = new FileWriter("catalogue.txt", false);
+            FileWriter bookFileWriter = new FileWriter("catalogue.txt", true);
 
-            fileWriter.write(book.toFileFormat() + "\n");
+            bookFileWriter.write("\n" + book.toFileFormat());
 
-            fileWriter.close();
+            bookFileWriter.close();
 
         } catch (IOException e) {
             e.printStackTrace();

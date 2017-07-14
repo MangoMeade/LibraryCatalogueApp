@@ -99,7 +99,11 @@ public class Book {
     }
 
     public String toCheckoutFormat() {
-        return title + " " + author + " " + genre + " " + braille + " " + status + " " + dueDate;
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        String formattedString = dueDate.format(formatter);
+
+        return title + " " + author + " " + genre + " " + braille + " " + status + " " + formattedString;
     }
 
 //    public String toFileFormat() {

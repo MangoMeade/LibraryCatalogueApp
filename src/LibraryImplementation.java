@@ -20,7 +20,7 @@ public class LibraryImplementation {
         menu.put(5, "Library Catalogue Maintenance [Library Personnel Only]");
         menu.put(6, "Exit");
 
-        final int MAX_ENTRY = menu.size();
+        final int MAIN_MAX_ENTRY = menu.size();
 
         do {
             System.out.printf("----------------------------------------------------------------------------------------------------\n");
@@ -31,23 +31,27 @@ public class LibraryImplementation {
                 System.out.printf("%d - %s\n", option.getKey(), option.getValue());
             }
 
-            menuSelection = menuSelection(MAX_ENTRY);
+            menuSelection = menuSelection(MAIN_MAX_ENTRY);
 
             if (menuSelection == 1) {
                 printCatalogue(catalogue);//Display entire list of books
+
             } else if (menuSelection == 2) {
                 SearchImplementation searchImpl = new SearchImplementation();
                 searchImpl.runSelectionLoop(catalogue); //Search for a book
+
             } else if (menuSelection == 3) {
                 //LibraryImplementation libraryImpl = new LibraryImplementation();
                 //libraryImpl.printCatalogue(catalogue);
                 printCatalogue(catalogue);
 
-                CheckoutImplementation checkoutImpl = new CheckoutImplementation();
+                CheckoutImplementation checkoutImpl = new CheckoutImplementation(); //Checkout a book
                 checkoutImpl.runCheckoutLoop(catalogue);
+
             } else if (menuSelection == 4) {
-                ReturnImplementation returnImpl = new ReturnImplementation();
+                ReturnImplementation returnImpl = new ReturnImplementation(); //Return a book
                 returnImpl.runReturnLoop(catalogue);
+
             } else if (menuSelection == 5) {
                 if(Validator.getInt("Please enter password: ") == 1234) {
                     BookAdder adder = new BookAdder();
@@ -56,17 +60,13 @@ public class LibraryImplementation {
                     System.out.println("Sorry, you are not authorized to perform this function.");
                 }
             }
-            if (menuSelection == MAX_ENTRY) {
-                TextFileReaderWriter fileWriter = new TextFileReaderWriter();
+
+            if (menuSelection == MAIN_MAX_ENTRY) {
+                TextFileReaderWriter fileWriter = new TextFileReaderWriter(); //Write updated catalogue of books to file before exiting
                 fileWriter.fileWriter(catalogue);
             }
 
-
-            if (menuSelection == MAX_ENTRY) {
-                break;
-            }
-
-        } while (menuSelection != MAX_ENTRY);
+        } while (menuSelection != MAIN_MAX_ENTRY); //Exit runMainLoop and return to startAndEnd
     }
 
     public int menuSelection(int MAX_ENTRY) {

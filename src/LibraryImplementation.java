@@ -20,14 +20,18 @@ public class LibraryImplementation {
         menu.put(5, "Add a book"); //FIXME: Only Library Personnel?
         menu.put(6, "Exit");
 
+        final int MAX_ENTRY = menu.size();
+
         do {
             System.out.printf("----------------------------------------------------------------------------------------------------\n");
             System.out.println("Main Menu: Which action would you like to perform?");
+            System.out.printf("----------------------------------------------------------------------------------------------------\n");
+
             for (HashMap.Entry<Integer, String> option : menu.entrySet()) {
                 System.out.printf("%d - %s\n", option.getKey(), option.getValue());
             }
 
-            menuSelection = menuSelection();
+            menuSelection = menuSelection(MAX_ENTRY);
 
             if (menuSelection == 1) {
                 printCatalogue(catalogue);//Display entire list of books
@@ -45,30 +49,31 @@ public class LibraryImplementation {
                 BookAdder adder = new BookAdder();
                 adder.addBook();
             }
-            if (menuSelection == 6) {
+            if (menuSelection == MAX_ENTRY) {
                 TextFileReaderWriter fileWriter = new TextFileReaderWriter();
                 fileWriter.fileWriter(catalogue);
             }
 
 
-            if (menuSelection == 6) {
+            if (menuSelection == MAX_ENTRY) {
                 break;
             }
 
-        } while (menuSelection != 6);
+        } while (menuSelection != MAX_ENTRY);
     }
 
-    public int menuSelection() {
+    public int menuSelection(int MAX_ENTRY) {
         int menuSelection;
 
         System.out.println();
-        menuSelection = Validator.getInt("Please enter a number from the Main Menu above: ", "Please enter a valid menu number: ", 1, 6);
+        menuSelection = Validator.getInt("Please enter a number from the Main Menu above: ", "Please enter a valid menu number: ", 1, MAX_ENTRY);
 
         return menuSelection;
     }
 
     public void printCatalogue(ArrayList<Book> consoleCatalogue) {
         System.out.println("\nCurrent catalogue...");
+        System.out.println();
 
         int i = 1;
 

@@ -9,4 +9,4 @@ Keeping London,Ellie Wade,07/02/2017,False,On Shelf,Fiction
 Catching Fire,Suzanne Collings,06/20/2017,True,On Shelf,Fiction
 A Clash of Kings,George RR Martin,07/12/2017,False,On Shelf,Fiction
 Hamlett,Shakespeare,07/12/2017,True,On Shelf,Fiction
-I am Malala,Malala Yousafzai,07/27/2017,False,Reserved,Nonfiction
+I am Malala,Malala Yousafzai,07/27/2017,False,Reserved,Historical

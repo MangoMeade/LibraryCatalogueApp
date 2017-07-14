@@ -19,18 +19,21 @@ public class SearchImplementation {
         attributeMenu.put(3, "Genre");
         attributeMenu.put(4, "Return to Main Menu");
 
+        final int MAX_ENTRY = attributeMenu.size();
+
         do {
             System.out.println();
             System.out.printf("----------------------------------------------------------------------------------------------------\n");
             System.out.println("Search Menu (Select Attribute to Search by):");
+            System.out.printf("----------------------------------------------------------------------------------------------------\n");
 
             for (HashMap.Entry<Integer, String> option : attributeMenu.entrySet()) {
                 System.out.printf("%d - %s\n", option.getKey(), option.getValue());
             }
 
-            attributeSelection = attributeSelection();
+            attributeSelection = attributeSelection(MAX_ENTRY);
 
-            if (attributeSelection != 4) {
+            if (attributeSelection != MAX_ENTRY) {
 
                 System.out.println();
                 String searchString = (Validator.getString("Please enter a word to search by: "));
@@ -38,52 +41,72 @@ public class SearchImplementation {
                 attributeSearch(catalogue, attributeSelection, searchString);
             }
 
-        } while (attributeSelection != 4);
+        } while (attributeSelection != MAX_ENTRY);
 
         LibraryImplementation implementation = new LibraryImplementation();
         implementation.runMainLoop(catalogue);
     }
 
-    public int attributeSelection() {
+    public int attributeSelection(int MAX_ENTRY) {
         int attributeSelection;
 
         System.out.println();
-        attributeSelection = Validator.getInt("Please enter a number from the Search Menu above: ", "Please enter a valid menu number: ", 1, 4);
+        attributeSelection = Validator.getInt("Please enter a number from the Search Menu above: ", "Please enter a valid menu number: ", 1, MAX_ENTRY);
 
         return attributeSelection;
     }
 
     public void attributeSearch(ArrayList<Book> catalogue, int attributeSelection, String searchString) {
-        String attribute = null;
+        int match = 0;
 
-//If Contains:
-        //Find titles containing the entered search word and print list to console:
+        System.out.println();
+        System.out.printf("----------------------------------------------------------------------------------------------------\n");
+        System.out.println("Here are the results of your search...");
+        System.out.printf("----------------------------------------------------------------------------------------------------\n");
+
         for (Book book : catalogue) {
             if (attributeSelection == 1) {
-                attribute = book.getTitle();
+                match = checkContains(book, book.getTitle(), searchString, match);
             } else if (attributeSelection == 2) {
-                attribute = book.getAuthor();
+                match = checkContains(book, book.getAuthor(), searchString, match);
             } else if (attributeSelection == 3) {
-                System.out.println(book.getGenre());
-                attribute = book.getGenre().toString();
-            } else {
-                attribute = book.getTitle();
+                match = checkEquals(book, book.getGenre().toString(), searchString, match);
             }
-            if (containsIgnoreCase(attribute, searchString)) {
-                System.out.println(book.toConsoleFormat());
-            }
+        }
+        if (match == 1) {
+            System.out.println("\n" + match + " match found.");
+        } else {
+            System.out.println("\n" + match + " matches found.");
         }
     }
 
-    public boolean containsIgnoreCase(String str, String searchStr) {
-        if (str == null || searchStr == null) return false;
+    //Print to console any books with title or author that contain the search string:
+    public int checkContains(Book book, String attribute, String searchString, int match) {
+        if (containsIgnoreCase(attribute, searchString)) {
+            System.out.println(book.toConsoleFormat());
+            match = match + 1;
+        }
+        return match;
+    }
 
-        final int length = searchStr.length();
+    //Print to console any books with genre that equals the search string:
+    public int checkEquals(Book book, String attribute, String searchString, int match) {
+        if (attribute.equalsIgnoreCase(searchString)) {
+            System.out.println(book.toConsoleFormat());
+            match = match + 1;
+        }
+        return match;
+    }
+
+    public boolean containsIgnoreCase(String attribute, String searchString) {
+        if (attribute == null || searchString == null) return false;
+
+        final int length = searchString.length();
         if (length == 0)
             return true;
 
-        for (int i = str.length() - length; i >= 0; i--) {
-            if (str.regionMatches(true, i, searchStr, 0, length))
+        for (int i = attribute.length() - length; i >= 0; i--) {
+            if (attribute.regionMatches(true, i, searchString, 0, length))
                 return true;
         }
         return false;

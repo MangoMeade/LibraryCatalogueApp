@@ -15,12 +15,13 @@ public class CheckoutImplementation {
         LibraryImplementation libraryImpl = new LibraryImplementation();
         libraryImpl.printCatalogue(catalogue);
 
-        checkoutSelection = Validator.getInt("Which book would you like to checkout? (Please enter the line number): ", "Please enter a valid line number: ", 1, 12);
+        checkoutSelection = Validator.getInt("Which book would you like to checkout? (Please enter the line number): ", "Please enter a valid line number: ", 1, catalogue.size());
 
         if(catalogue.get(checkoutSelection - 1).getStatus() == Status.ON_SHELF){
             dueDateCreation(catalogue.get(checkoutSelection - 1));
             System.out.println();
-        } else if (catalogue.get(checkoutSelection - 1).getStatus() == Status.CHECKED_OUT) {
+            System.out.println("Please stop by the circulation desk to pick up your book.");
+        } else {
             System.out.println("Sorry that book is no longer available.");
         }
 
@@ -31,7 +32,7 @@ public class CheckoutImplementation {
         checkoutBook.setDueDate(LocalDate.now().plusWeeks(2));
         checkoutBook.setStatus(Status.CHECKED_OUT);
 
-        System.out.println(checkoutBook);
+        System.out.println(checkoutBook.toCheckoutFormat());
 
     }
 

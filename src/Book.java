@@ -94,4 +94,9 @@ public class Book {
     public String toConsoleFormat() {
         return title + " " + author + " " + genre + " " + braille + " " + status;
     }
+
+    public String toCheckoutFormat() {
+        return title + " " + author + " " + genre + " " + braille + " " + status + " " + dueDate;
+
+    }
 }

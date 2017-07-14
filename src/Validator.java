@@ -15,7 +15,7 @@ public class Validator {
         return s;
     }
 
-    public String getString(String prompt, String invalidPrompt, String valid1, String valid2) {
+    /*public String getString(String prompt, String invalidPrompt, String valid1, String valid2) {
         boolean isValid = false;
         String s = "";
         while (isValid == false) {
@@ -29,7 +29,7 @@ public class Validator {
             }
         }
         return s;
-    }
+    }*/
 
     public String getString(String prompt, String invalidPrompt, String valid1, String valid2, String valid3) {
         boolean isValid = false;
@@ -76,5 +76,27 @@ public class Validator {
                 isValid = true;
         }
         return i;
+    }
+
+    public Boolean getString(String prompt, String invalidPrompt, String valid1, String valid2) {
+        String s = "";
+        Boolean braille = false;
+        boolean isValid = false;
+        while (isValid == false) {
+            System.out.print(prompt);
+            s = entry.next();  // read user entry
+            entry.nextLine();  // discard any other data entered on the line
+            if (s.equalsIgnoreCase(valid1) || s.equalsIgnoreCase(valid2)) {
+                if(s.equalsIgnoreCase("y")) {
+                    braille = true;
+                } else {
+                    braille = false;
+                }
+                isValid = true;
+            } else {
+                System.out.print(invalidPrompt);
+            }
+        }
+        return braille;
     }
 }

@@ -1,45 +1,37 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 // Created by jenny on 7/12/2017.
 
 
 public class BookAdder extends CatalogueTextFile{
-    public void addBook() {
-        Scanner scnr = new Scanner(System.in);
 
+    private Validator Validator = new Validator();
+
+    public void addBook(ArrayList<Book> catalogue) {
 
         Status onShelf = Status.ON_SHELF;
         Genre fiction = Genre.FICTION;
-        String title;
-        String author;
+
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
         LocalDate dueDate = LocalDate.now();
-        Boolean braille;
-        String status;
-        String genre;
+        Book book = new Book();
 
-        System.out.println("Book title?");
-        title = scnr.nextLine();
-        System.out.println("Book author?");
-        author = scnr.nextLine();
-
-        System.out.println("Is this book braille?");
-        braille = scnr.nextBoolean();
-        scnr.nextLine();
-        System.out.println("What is the book genre? (Biographical, Drama, Fiction, Nonfiction, Historical)");
-        genre = scnr.nextLine();
-
-        Book book1 = new Book(title, author, dueDate, braille, Status.ON_SHELF, Genre.getEnumVersion(genre));
-        //writeToCatalogue(book1.getTitle() + "," + book1.getAuthor() + "," + book1.getDueDate() + "," + book1.getBraille() + "," + book1.getStatus() + "," + book1.getGenre());
+        book.setTitle(Validator.getString("Book title? "));
+        book.setAuthor(Validator.getString("Book author? "));
+        book.setBraille(Validator.getString("Is this book Braille? (y/n)", "Invalid entry. Please enter \"y\" or \"n\"", "y", "n"));
+        book.setGenre(Genre.getEnumVersion(Validator.getString("What is the book genre? (Biographical, Drama, Fiction, Nonfiction, Historical)")));
+        Book book1 = new Book(book.getTitle(), book.getAuthor(), dueDate, book.getBraille(), Status.ON_SHELF, book.getGenre());
 
         TextFileReaderWriter fileWriter = new TextFileReaderWriter();
         fileWriter.fileWriter(book1);
 
-        readFromCatalogue();
+        catalogue.add(book1);
 
+        TextFileReaderWriter reader = new TextFileReaderWriter();
+        reader.readFromCatalogue();
     }
-
 }
 

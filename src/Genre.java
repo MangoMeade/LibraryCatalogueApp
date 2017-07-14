@@ -13,19 +13,19 @@ public enum Genre {
     public static Genre getEnumVersion(String stat){
         Genre result = null;
         switch (stat){
-            case "Nonfiction":
+            case "nonfiction":
                 result = Genre.NONFICTION;
                 break;
-            case "Historical":
+            case "historical":
                 result = Genre.HISTORICAL;
                 break;
-            case "Fiction":
+            case "fiction":
                 result = Genre.FICTION;
                 break;
-            case "Drama":
+            case "drama":
                 result = Genre.DRAMA;
                 break;
-            case "Biographical":
+            case "biographical":
                 result = Genre.BIOGRAPHICAL;
                 break;
             default:

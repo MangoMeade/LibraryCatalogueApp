@@ -1,9 +1,10 @@
-A Song of Fire and Ice, George R.R. Martin,07/12/2017,false,On Shelf,Fiction
-Romeo and Juliet,Shakespeare,07/27/2017,true,Reserved,Fiction
-How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/08/2017,true,On Shelf,Nonfiction
-Blue Hat Green Hat,Sandra Boynton,07/27/2017,true,Reserved,Fiction
-Keeping London,Ellie Wade,07/02/2017,false,On Shelf,Fiction
-Catching Fire,Suzanne Collings,06/20/2017,true,On Shelf,Fiction
-A Clash of Kings,George RR Martin,07/12/2017,false,On Shelf,Fiction
-Hamlett,Shakespeare,07/12/2017,true,On Shelf,Fiction
-I am Malala,Malala Yousafzai,07/27/2017,false,Reserved,Historical
+A Song of Fire and Ice, George R.R. Martin,07/12/2017,false,On Shelf,null
+Romeo and Juliet,Shakespeare,07/27/2017,true,Reserved,null
+How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/28/2017,true,On Shelf,null
+Blue Hat Green Hat,Sandra Boynton,07/27/2017,true,Reserved,null
+Keeping London,Ellie Wade,07/28/2017,false,Checked Out,null
+Catching Fire,Suzanne Collings,06/20/2017,true,On Shelf,null
+A Clash of Kings,George RR Martin,07/12/2017,false,On Shelf,null
+Hamlett,Shakespeare,07/12/2017,true,On Shelf,null
+I am Malala,Malala Yousafzai,07/27/2017,false,Reserved,null
+title,author,07/14/2017,true,On Shelf,null

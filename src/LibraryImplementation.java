@@ -55,7 +55,7 @@ public class LibraryImplementation {
             } else if (menuSelection == 5) {
                 if(Validator.getInt("Please enter password: ") == 1234) {
                     BookAdder adder = new BookAdder();
-                    adder.addBook();
+                    adder.addBook(catalogue);
                 } else {
                     System.out.println("Sorry, you are not authorized to perform this function.");
                 }

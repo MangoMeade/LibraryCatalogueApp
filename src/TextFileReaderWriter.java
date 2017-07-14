@@ -66,7 +66,7 @@ public class TextFileReaderWriter {
     public void fileWriter(ArrayList<Book> catalogue) {
         try {
             //If the test.txt file does not exist, FileWriter will create it
-            FileWriter catalogueFileWriter = new FileWriter("catalogue.txt", true);
+            FileWriter catalogueFileWriter = new FileWriter("catalogue.txt", false);
 
 
             for (int i = 0; i < catalogue.size(); i++) {

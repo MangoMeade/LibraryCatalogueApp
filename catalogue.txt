@@ -1,21 +1,21 @@
-Moo Ba Lalala,Sandra Boynton,2017-07-14,true,Checked Out,Fiction
-Finding London,Ellie Wade,2017-07-14,false,On Shelf,Fiction
-Hunger Games,Suzanne Collings,2017-07-14,true,Checked Out,Fiction
-A Song of Fire and Ice, George R.R. Martin,2017-07-14,false,On Shelf,Fiction
-Romeo and Juliet,Shakespeare,2017-07-14,true,Reserved,Fiction
-How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,2017-07-14,true,On Shelf,Nonfiction
-Blue Hat Green Hat,Sandra Boynton,2017-07-14,true,Reserved,Fiction
-Keeping London,Ellie Wade,2017-07-14,false,On Shelf,Fiction
-Catching Fire,Suzanne Collings,2017-07-14,true,On Shelf,Fiction
-A Clash of Kings,George RR Martin,2017-07-14,false,On Shelf,Fiction
-Hamlett,Shakespeare,2017-07-14,true,On Shelf,Fiction
-I am Malala,Malala Yousafzai,2017-07-14,false,Reserved,Historical
-Moo Ba Lalala,Sandra Boynton,2017-07-14,true,Checked Out,Fiction
-Finding London,Ellie Wade,2017-07-14,false,On Shelf,Fiction
-Hunger Games,Suzanne Collings,2017-07-14,true,Checked Out,Fiction
-A Song of Fire and Ice, George R.R. Martin,2017-07-14,false,On Shelf,Fiction
-Harry Potter,JK Rowling,2017-07-14,false,On Shelf,Fiction
-Harry Potter 2,JK Rowling,2017-07-14,false,On Shelf,Fiction
-Harry Potter 3,JK Rowling,2017-07-14,true,On Shelf,Fiction
-Harry Potter 4,JK Rowling,2017-07-14,false,On Shelf,Fiction
-Log in the Sea of Cortez,John Steinbeck,2017-07-14,false,On Shelf,Biographical
+Moo Ba Lalala,Sandra Boynton,07/14/2017,true,Checked Out,Fiction
+Finding London,Ellie Wade,07/14/2017,false,On Shelf,Fiction
+Hunger Games,Suzanne Collings,07/14/2017,true,Checked Out,Fiction
+A Song of Fire and Ice, George R.R. Martin,07/14/2017,false,On Shelf,Fiction
+Romeo and Juliet,Shakespeare,07/14/2017,true,Reserved,Fiction
+How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/28/2017,true,Checked Out,Nonfiction
+Blue Hat Green Hat,Sandra Boynton,07/14/2017,true,Reserved,Fiction
+Keeping London,Ellie Wade,07/14/2017,false,On Shelf,Fiction
+Catching Fire,Suzanne Collings,07/14/2017,true,On Shelf,Fiction
+A Clash of Kings,George RR Martin,07/14/2017,false,On Shelf,Fiction
+Hamlett,Shakespeare,07/14/2017,true,On Shelf,Fiction
+I am Malala,Malala Yousafzai,07/14/2017,false,Reserved,Historical
+Moo Ba Lalala,Sandra Boynton,07/14/2017,true,Checked Out,Fiction
+Finding London,Ellie Wade,07/14/2017,false,On Shelf,Fiction
+Hunger Games,Suzanne Collings,07/14/2017,true,Checked Out,Fiction
+A Song of Fire and Ice, George R.R. Martin,07/14/2017,false,On Shelf,Fiction
+Harry Potter,JK Rowling,07/14/2017,false,On Shelf,Fiction
+Harry Potter 2,JK Rowling,07/14/2017,false,On Shelf,Fiction
+Harry Potter 3,JK Rowling,07/14/2017,true,On Shelf,Fiction
+Harry Potter 4,JK Rowling,07/14/2017,false,On Shelf,Fiction
+Log in the Sea of Cortez,John Steinbeck,07/14/2017,false,On Shelf,Biographical

@@ -10,8 +10,8 @@ public class Validator {
 
     public String getString(String prompt) {
         System.out.print(prompt);
-        String s = entry.next();  // read user entry
-        entry.nextLine();  // discard any other data entered on the line
+        String s = entry.nextLine();  // read user entry
+        //entry.nextLine();  // discard any other data entered on the line
         return s;
     }
 

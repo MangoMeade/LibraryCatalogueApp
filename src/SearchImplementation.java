@@ -105,8 +105,8 @@ public class SearchImplementation {
     //Print to console any books with genre that equals the search string:
     public int checkEquals(Book book, String attribute, String searchString, int match, ArrayList catalogue) {
 
-        if (attribute.equalsIgnoreCase(searchString)) {
-            System.out.println((catalogue.indexOf(book) + 1) + book.toConsoleFormat());
+        if (attribute.equalsIgnoreCase(searchString.replaceAll("\\s", ""))) {
+            System.out.println((catalogue.indexOf(book) + 1) + " " + book.toConsoleFormat());
             match = match + 1;
         }
 

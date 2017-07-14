@@ -56,8 +56,7 @@ public class TextFileReaderWriter {
 
         book.setStatus(Status.getEnumVersion(bookAttributes[4]));
 
-        book.setGenre(Genre.getEnumVersion(bookAttributes[5]));
-
+        book.setGenre(Genre.getEnumVersion((bookAttributes[5]).toString().toLowerCase()));
         return book;
     }
 
@@ -70,9 +69,12 @@ public class TextFileReaderWriter {
 
 
             for (int i = 0; i < catalogue.size(); i++) {
-                catalogueFileWriter.write(catalogue.get(i).toFileFormat() + "\n");
+                if (i != catalogue.size() - 1) {
+                    catalogueFileWriter.write(catalogue.get(i).toFileFormat() + "\n");
+                } else {
+                    catalogueFileWriter.write(catalogue.get(i).toFileFormat());
+                }
             }
-
             catalogueFileWriter.close();
 
         } catch (IOException e) {

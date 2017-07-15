@@ -1,3 +1,4 @@
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -88,7 +89,11 @@ public class LibraryImplementation {
             System.out.print(i + " " + book.getTitle() + " " + book.getAuthor() + " " + book.getGenre() + " " + book.getBraille() + " " + book.getStatus());
             i = i + 1;
             if (book.getStatus()==Status.CHECKED_OUT){
-                System.out.print(" " + book.getDueDate());
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+                String formattedString = book.getDueDate().format(formatter);
+
+                System.out.print(" " + formattedString);
             }
             System.out.println();
         }

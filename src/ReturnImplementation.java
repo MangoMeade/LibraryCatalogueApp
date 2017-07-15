@@ -1,3 +1,4 @@
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -29,6 +30,7 @@ public class ReturnImplementation {
 
             returnSelection = Validator.getInt("Which book would you like to return? (Please enter the line number): ", "Please enter a valid line number: ", 1, checkedoutCatalogue.size());
 
+            System.out.printf("----------------------------------------------------------------------------------------------------\n");
             //returnToShelf(catalogue.get(returnSelection - 1));
             returnToShelf(bookIndex.get(returnSelection));
 
@@ -45,7 +47,7 @@ public class ReturnImplementation {
     public void returnToShelf(Book returnedBook) {
 
         returnedBook.setStatus(Status.ON_SHELF);
-        System.out.println("\n" + returnedBook.toConsoleFormat());
+        System.out.println("\n" + returnedBook.toCheckoutFormat());
 
     }
 
@@ -60,7 +62,10 @@ public class ReturnImplementation {
             bookIndex.put(i, book);
             i = i + 1;
             if (book.getStatus() == Status.CHECKED_OUT) {
-                System.out.print(" " + book.getDueDate());
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+                String formattedString = book.getDueDate().format(formatter);
+
+                System.out.print(" " + formattedString);
             }
             System.out.println();
         }

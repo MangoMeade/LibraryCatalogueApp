@@ -16,6 +16,7 @@ public class CheckoutImplementation {
         checkoutSelection = Validator.getInt("Which book would you like to checkout? (Please enter the line number): ", "Please enter a valid line number: ", 1, catalogue.size());
 
         if(catalogue.get(checkoutSelection - 1).getStatus() == Status.ON_SHELF){
+            System.out.printf("----------------------------------------------------------------------------------------------------\n");
             System.out.println("\nCheckout successful...\n");
             dueDateCreation(catalogue.get(checkoutSelection - 1));
             System.out.println();

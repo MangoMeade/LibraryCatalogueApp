@@ -15,7 +15,6 @@ public class LibraryCatalogueApp {
 
     }
 
-
     public static void startAndEnd() {
 
         //Welcomes user:

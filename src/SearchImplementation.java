@@ -39,11 +39,7 @@ public class SearchImplementation {
 
                 attributeSearch(catalogue, attributeSelection, searchString);
             }
-
         } while (attributeSelection != SEARCH_MAX_ENTRY);
-
-        //LibraryImplementation implementation = new LibraryImplementation();
-        //implementation.runMainLoop(catalogue);
     }
 
     public int attributeSelection(int MAX_ENTRY) {

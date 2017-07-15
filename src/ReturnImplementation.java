@@ -38,9 +38,6 @@ public class ReturnImplementation {
         } else {
 
             System.out.println("\nThere are currently no books checked out. Returning to Main Menu.\n");
-
-            LibraryImplementation implementation = new LibraryImplementation();
-            implementation.runMainLoop(catalogue);
         }
     }
 

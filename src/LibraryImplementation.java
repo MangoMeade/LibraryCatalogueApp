@@ -67,7 +67,7 @@ public class LibraryImplementation {
 
             //Prompt for password (Library Personnel ONLY) and proceed to BookAdder to add a book:
             else if (menuSelection == 5) {
-                if(Validator.getInt("Please enter password: ") == 1234) {
+                if (Validator.getInt("Please enter password: ") == 1234) {
                     BookAdder adder = new BookAdder();
                     adder.addBook(catalogue);
                 } else {
@@ -80,9 +80,8 @@ public class LibraryImplementation {
                 TextFileReaderWriter fileWriter = new TextFileReaderWriter();
                 fileWriter.fileWriter(catalogue);
             }
-
-          //Exit
-        } while (menuSelection != MAIN_MAX_ENTRY); //Exit runMainLoop and return to startAndEnd
+        } while (menuSelection != MAIN_MAX_ENTRY);
+        //Exit runMainLoop and return to startAndEnd
     }
 
     //Receive and validate user selection from Main Menu:
@@ -95,6 +94,7 @@ public class LibraryImplementation {
         return menuSelection;
     }
 
+    //Print current library catalogue to console:
     public void printCatalogue(ArrayList<Book> consoleCatalogue) {
         System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
         System.out.print("Current catalogue...");
@@ -102,10 +102,11 @@ public class LibraryImplementation {
 
         int i = 1;
 
+        //Loop through each book and print attributes (including due date if checked out):
         for (Book book : consoleCatalogue) {
             System.out.print(i + " " + book.getTitle() + " " + book.getAuthor() + " " + book.getGenre() + " " + book.getBraille() + " " + book.getStatus());
             i = i + 1;
-            if (book.getStatus()==Status.CHECKED_OUT){
+            if (book.getStatus() == Status.CHECKED_OUT) {
 
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
                 String formattedString = book.getDueDate().format(formatter);

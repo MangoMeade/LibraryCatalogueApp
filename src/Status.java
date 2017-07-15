@@ -3,6 +3,7 @@
  */
 public enum Status {
 
+    //Book status options:
     ON_SHELF("On Shelf"), CHECKED_OUT("Checked Out"), RESERVED("Reserved");
 
     private String stringVersion;
@@ -28,6 +29,7 @@ public enum Status {
         }
         return result;
     }
+
     //Override to output Status as string (as declared for stringVersion) instead of reference location:
     @Override
     public String toString() {

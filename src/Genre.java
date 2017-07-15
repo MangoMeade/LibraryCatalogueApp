@@ -2,6 +2,8 @@
  * Created by jenny on 7/12/2017.
  */
 public enum Genre {
+
+    //Book genre options:
     FICTION("Fiction"), NONFICTION("Nonfiction"), HISTORICAL("Historical"), DRAMA("Drama"), BIOGRAPHICAL("Biographical"), MYSTERY("Mystery");
 
     private String stringVersion;

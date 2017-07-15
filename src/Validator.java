@@ -4,6 +4,7 @@ import java.util.Scanner;
  * Created by jenny on 7/12/2017.
  */
 
+//Use Validator to validate user entries throughout:
 public class Validator {
 
     private Scanner entry = new Scanner(System.in);
@@ -87,7 +88,7 @@ public class Validator {
             s = entry.next();  // read user entry
             entry.nextLine();  // discard any other data entered on the line
             if (s.equalsIgnoreCase(valid1) || s.equalsIgnoreCase(valid2)) {
-                if(s.equalsIgnoreCase("y")) {
+                if (s.equalsIgnoreCase("y")) {
                     braille = true;
                 } else {
                     braille = false;

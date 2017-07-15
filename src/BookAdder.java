@@ -22,7 +22,7 @@ public class BookAdder extends CatalogueTextFile{
         book.setTitle(Validator.getString("Book title? "));
         book.setAuthor(Validator.getString("Book author? "));
         book.setBraille(Validator.getString("Is this book Braille? (y/n)", "Invalid entry. Please enter \"y\" or \"n\"", "y", "n"));
-        book.setGenre(Genre.getEnumVersion(Validator.getString("What is the book genre? (Biographical, Drama, Fiction, Nonfiction, Historical)").toLowerCase()));
+        book.setGenre(Genre.getEnumVersion(Validator.getString("What is the book genre? (Biographical, Drama, Fiction, Nonfiction, Historical, Mystery)").toLowerCase()));
         Book book1 = new Book(book.getTitle(), book.getAuthor(), dueDate, book.getBraille(), Status.ON_SHELF, book.getGenre());
 
         TextFileReaderWriter fileWriter = new TextFileReaderWriter();

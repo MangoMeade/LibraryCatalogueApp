@@ -16,7 +16,7 @@ public class SearchImplementation {
 
         attributeMenu.put(1, "Title");
         attributeMenu.put(2, "Author");
-        attributeMenu.put(3, "Genre: Drama, Fiction, Nonfiction, Historical, Biographical");
+        attributeMenu.put(3, "Genre (Drama, Fiction, Nonfiction, Historical, Biographical, Mystery)");
         attributeMenu.put(4, "Return to Main Menu");
 
         final int SEARCH_MAX_ENTRY = attributeMenu.size();
@@ -58,8 +58,8 @@ public class SearchImplementation {
     public void attributeSearch(ArrayList<Book> catalogue, int attributeSelection, String searchString) {
 
         System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
-        System.out.println("Here are the results of your search...");
-        System.out.printf("----------------------------------------------------------------------------------------------------\n\n");
+        System.out.print("Here are the results of your search...");
+        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
 
         HashMap<Integer, Book> bookIndex = new HashMap<>();
         int match = 0;

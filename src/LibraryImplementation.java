@@ -24,7 +24,7 @@ public class LibraryImplementation {
         final int MAIN_MAX_ENTRY = menu.size();
 
         do {
-            System.out.printf("----------------------------------------------------------------------------------------------------\n");
+            System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
             System.out.println("Main Menu: Which action would you like to perform?");
             System.out.printf("----------------------------------------------------------------------------------------------------\n");
 
@@ -80,8 +80,9 @@ public class LibraryImplementation {
     }
 
     public void printCatalogue(ArrayList<Book> consoleCatalogue) {
-        System.out.println("\nCurrent catalogue...");
-        System.out.println();
+        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+        System.out.print("Current catalogue...");
+        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
 
         int i = 1;
 
@@ -97,7 +98,5 @@ public class LibraryImplementation {
             }
             System.out.println();
         }
-        System.out.println();
     }
-
 }

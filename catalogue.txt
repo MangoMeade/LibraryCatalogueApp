@@ -4,17 +4,20 @@ How They Croaked: The Awful Ends of the Awfully Famous,Georgia Bragg,07/08/2017,
 Blue Hat Green Hat,Sandra Boynton,07/27/2017,true,Reserved,Fiction
 Keeping London,Ellie Wade,07/28/2017,false,Checked Out,Fiction
 Catching Fire,Suzanne Collings,07/28/2017,true,On Shelf,Fiction
-A Clash of Kings,George RR Martin,07/12/2017,false,On Shelf,Fiction
+A Clash of Kings,George RR Martin,07/28/2017,false,Checked Out,Fiction
 Hamlett,Shakespeare,07/28/2017,true,On Shelf,Fiction
 I am Malala,Malala Yousafzai,07/27/2017,false,Reserved,Historical
 Mechanics of Materials,James Barber,07/14/2017,false,On Shelf,Nonfiction
 Hidden Figures,Margot Lee Shetterly,07/28/2017,false,Checked Out,Nonfiction
 The Elements of Style,William Strunk,07/28/2017,false,On Shelf,Nonfiction
 A Christmas Carol,Charles Dickens,07/28/2017,false,Checked Out,Historical
-All Quiet on the Western Front,Erich Maria Remarque,07/14/2017,true,On Shelf,Historical
+All Quiet on the Western Front,Erich Maria Remarque,07/28/2017,true,Checked Out,Historical
 A Farewell to Arms,Ernest Hemingway,07/14/2017,false,On Shelf,Historical
 Bossypants,Tina Fey,07/14/2017,false,On Shelf,Biographical
 Steve Jobs,Walter Isaacson,07/14/2017,false,On Shelf,Biographical
 Death of a Salesman,Arthur Miller,07/14/2017,true,On Shelf,Drama
 A Streetcar Named Desire,Tennessee Williams,07/28/2017,true,Checked Out,Drama
 The Kite Runner,Khaled Hosseini,07/14/2017,false,On Shelf,Drama
+1984,George Orwell,07/14/2017,false,On Shelf,Fiction
+The Girl with the Dragon Tattoo,Mikael Blomkvist,07/28/2017,false,Checked Out,Mystery
+Murder on the Orient Express,Agatha Christie,07/14/2017,false,On Shelf,Mystery

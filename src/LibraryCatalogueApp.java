@@ -23,7 +23,7 @@ public class LibraryCatalogueApp {
         TextFileReaderWriter reader = new TextFileReaderWriter();
         ArrayList<Book> catalogue = reader.readFromCatalogue();
 
-        System.out.printf("There are " + catalogue.size() + " books in the library.\n\n");
+        System.out.printf("There are " + catalogue.size() + " books in the library.\n");
 
         LibraryImplementation implementation = new LibraryImplementation();
         implementation.runMainLoop(catalogue);

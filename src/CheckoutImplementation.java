@@ -20,7 +20,7 @@ public class CheckoutImplementation {
             System.out.println("\nCheckout successful...\n");
             dueDateCreation(catalogue.get(checkoutSelection - 1));
             System.out.println();
-            System.out.println("Please stop by the circulation desk to pick up your book.\n");
+            System.out.println("Please stop by the circulation desk to pick up your book.");
         } else {
             System.out.println("\nSorry that book is no longer available. Returning to Main Menu.\n");
         }

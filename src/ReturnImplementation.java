@@ -34,7 +34,7 @@ public class ReturnImplementation {
             //returnToShelf(catalogue.get(returnSelection - 1));
             returnToShelf(bookIndex.get(returnSelection));
 
-            System.out.println("\nThank you. Your book was successfully returned! Returning to Main Menu.\n");
+            System.out.println("\nThank you. Your book was successfully returned! Returning to Main Menu.");
         } else {
 
             System.out.println("\nThere are currently no books checked out. Returning to Main Menu.\n");
@@ -54,8 +54,9 @@ public class ReturnImplementation {
     public HashMap printReturnCatalogue(ArrayList<Book> catalogue, ArrayList<Book> checkedoutCatalogue, HashMap<Integer, Book> bookIndex) {
         int i = 1;
 
-        System.out.println("\nCurrent catalogue...");
-        System.out.println();
+        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+        System.out.print("The following books are currently checked out...");
+        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
 
         for (Book book : checkedoutCatalogue) {
             System.out.print(i + " " + book.getTitle() + " " + book.getAuthor() + " " + book.getGenre() + " " + book.getBraille() + " " + book.getStatus());

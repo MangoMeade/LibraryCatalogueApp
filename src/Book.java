@@ -9,7 +9,7 @@ public class Book {
     private String title;
     private String author;
     private LocalDate dueDate;
-    private Boolean braille;
+    private String braille;
     private Status status;
     private Genre genre;
 
@@ -17,7 +17,7 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String author, LocalDate dueDate, Boolean braille, Status status, Genre genre) {
+    public Book(String title, String author, LocalDate dueDate, String braille, Status status, Genre genre) {
         this.title = title;
         this.author = author;
         this.dueDate = dueDate;
@@ -50,11 +50,11 @@ public class Book {
         this.dueDate = dueDate;
     }
 
-    public Boolean getBraille() {
+    public String getBraille() {
         return braille;
     }
 
-    public void setBraille(Boolean braille) {
+    public void setBraille(String braille) {
         this.braille = braille;
     }
 
@@ -92,8 +92,13 @@ public class Book {
         return title + "," + author + "," + formattedString + "," + braille + "," + status + "," + genre;
     }
 
-    public String toConsoleFormat() {
+    /*public String toConsoleFormat() {
         return title + " " + author + " " + genre + " " + braille + " " + status;
+    }*/
+    public String toConsoleFormat(int i) {
+
+        return String.format("%-5s%-60s%-30s%-18s%-15s%-15s", i, title, author, genre, braille, status);
+
     }
 
     public String toCheckoutFormat() {
@@ -101,7 +106,7 @@ public class Book {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         String formattedString = dueDate.format(formatter);
 
-        return title + " " + author + " " + genre + " " + braille + " " + status + " " + formattedString;
+        return String.format("%-60s%-30s%-18s%-15s%-15s%-15s", title, author, genre, braille, status, formattedString);
     }
 
     /*public String toFileFormat() {

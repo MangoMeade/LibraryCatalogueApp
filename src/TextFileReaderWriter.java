@@ -1,4 +1,5 @@
 import java.io.*;
+import java.lang.reflect.Field;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.time.format.DateTimeFormatter;
@@ -62,9 +63,8 @@ public class TextFileReaderWriter {
         LocalDate dueDate = LocalDate.parse(bookAttributes[2], formatter);
         book.setDueDate(dueDate);
 
-        //Convert string to Boolean (instance) and assign book format (Braille: yes/no):
-        Boolean braille = new Boolean(bookAttributes[3]);
-        book.setBraille(braille);
+        //Assign book format (Braille: yes/no):
+        book.setBraille(bookAttributes[3]);
 
         //Convert string to Status enum and assign book status:
         book.setStatus(Status.getEnumVersion(bookAttributes[4]));
@@ -114,17 +114,4 @@ public class TextFileReaderWriter {
             e.printStackTrace();
         }
     }
-
-/*    public int getColumnWidths(ArrayList<Book> catalogue) {
-        int maxLength = catalogue.get(0).getTitle().length();
-
-        for (Book book : catalogue) {
-
-            if (book.getTitle().length() > maxLength) {
-                maxLength = book.getTitle().length();
-            }
-
-        }
-        return maxLength;
-    }*/
 }

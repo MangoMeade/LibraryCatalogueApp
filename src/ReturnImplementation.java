@@ -35,7 +35,7 @@ public class ReturnImplementation {
 
             //Get book selection from user:
             returnSelection = Validator.getInt("Which book would you like to return? (Please enter the line number): ", "Please enter a valid line number: ", 1, checkedoutCatalogue.size());
-            System.out.printf("----------------------------------------------------------------------------------------------------\n");
+            System.out.printf("-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
 
             //Proceed to return book to shelf:
             returnToShelf(bookIndex.get(returnSelection));
@@ -54,27 +54,33 @@ public class ReturnImplementation {
         //Assign book status to on shelf:
         returnedBook.setStatus(Status.ON_SHELF);
 
+        System.out.printf("\n%-60s%-30s%-18s%-15s%-15s%-15s\n", "Title:", "Author:", "Genre:", "Braille:", "Status:", "Due Date:");
+        System.out.printf("%-60s%-30s%-18s%-15s%-15s%-15s\n", "------", "-------", "------", "--------", "-------", "---------");
+
         //Print updated book to console:
-        System.out.println("\n" + returnedBook.toCheckoutFormat());
+        System.out.println(returnedBook.toCheckoutFormat());
     }
 
     //Print currently checked out books to console:
     public HashMap printReturnCatalogue(ArrayList<Book> catalogue, ArrayList<Book> checkedoutCatalogue, HashMap<Integer, Book> bookIndex) {
         int i = 1;
 
-        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+        System.out.printf("\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
         System.out.print("The following books are currently checked out...");
-        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+        System.out.printf("\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+
+        System.out.printf("\n%-5s%-60s%-30s%-18s%-15s%-15s%-15s\n", "#", "Title:", "Author:", "Genre:", "Braille:", "Status:", "Due Date:");
+        System.out.printf("%-5s%-60s%-30s%-18s%-15s%-15s%-15s\n", "--", "------", "-------", "------", "--------", "-------", "---------");
 
         for (Book book : checkedoutCatalogue) {
-            System.out.print(i + " " + book.getTitle() + " " + book.getAuthor() + " " + book.getGenre() + " " + book.getBraille() + " " + book.getStatus());
+            System.out.printf("%-5s%-60s%-30s%-18s%-15s%-15s", i, book.getTitle(), book.getAuthor(), book.getGenre(), book.getBraille(), book.getStatus());
             bookIndex.put(i, book);
             i = i + 1;
             if (book.getStatus() == Status.CHECKED_OUT) {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
                 String formattedString = book.getDueDate().format(formatter);
 
-                System.out.print(" " + formattedString);
+                System.out.printf("%-15s", formattedString);
             }
             System.out.println();
         }

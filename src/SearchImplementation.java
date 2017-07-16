@@ -26,9 +26,9 @@ public class SearchImplementation {
 
         //Loop until user selects "Return to Main Menu" (enters the key = MAIN_MAX_ENTRY):
         do {
-            System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+            System.out.printf("\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
             System.out.println("Search Menu (Select Attribute to Search by):");
-            System.out.printf("----------------------------------------------------------------------------------------------------\n");
+            System.out.printf("-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
 
             //Print Search Menu:
             for (HashMap.Entry<Integer, String> option : attributeMenu.entrySet()) {
@@ -42,7 +42,7 @@ public class SearchImplementation {
             if (attributeSelection != SEARCH_MAX_ENTRY) {
 
                 System.out.println();
-                String searchString = (Validator.getString("Please enter a word to search by: "));
+                String searchString = (Validator.getString("Please enter the keyword or genre to search by: "));
 
                 attributeSearch(catalogue, attributeSelection, searchString);
             }
@@ -63,9 +63,9 @@ public class SearchImplementation {
     //Search attributes for keyword:
     public void attributeSearch(ArrayList<Book> catalogue, int attributeSelection, String searchString) {
 
-        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+        System.out.printf("\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
         System.out.print("Here are the results of your search...");
-        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+        System.out.printf("\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
 
         //Count the number of books that match the search criteria:
         int match = 0;
@@ -100,10 +100,13 @@ public class SearchImplementation {
     public int checkContains(Book book, String attribute, String searchString, int match, ArrayList catalogue) {
 
         if (containsIgnoreCase(attribute, searchString)) {
-            System.out.println((catalogue.indexOf(book) + 1) + " " + book.toConsoleFormat());
             match = match + 1;
+            if (match == 1) {
+                System.out.printf("\n%-5s%-60s%-30s%-18s%-15s%-15s\n", "#", "Title:", "Author:", "Genre:", "Braille:", "Status:");
+                System.out.printf("%-5s%-60s%-30s%-18s%-15s%-15s\n", "--", "------", "-------", "------", "--------", "-------");
+            }
+            System.out.println(book.toConsoleFormat((catalogue.indexOf(book) + 1)));
         }
-
         return match;
     }
 
@@ -111,11 +114,13 @@ public class SearchImplementation {
     public int checkEquals(Book book, String attribute, String searchString, int match, ArrayList catalogue) {
 
         if (attribute.equalsIgnoreCase(searchString.replaceAll("\\s", ""))) {
-            System.out.println((catalogue.indexOf(book) + 1) + " " + book.toConsoleFormat());
             match = match + 1;
+            if (match == 1) {
+                System.out.printf("\n%-5s%-60s%-30s%-18s%-15s%-15s\n", "#", "Title:", "Author:", "Genre:", "Braille:", "Status:");
+                System.out.printf("%-5s%-60s%-30s%-18s%-15s%-15s\n", "--", "------", "-------", "------", "--------", "-------");
+            }
+            System.out.println(book.toConsoleFormat((catalogue.indexOf(book) + 1)));
         }
-
-
         return match;
     }
 

@@ -79,25 +79,24 @@ public class Validator {
         return i;
     }
 
-    public Boolean getString(String prompt, String invalidPrompt, String valid1, String valid2) {
+    public String getString(String prompt, String invalidPrompt, String valid1, String valid2) {
         String s = "";
-        Boolean braille = false;
         boolean isValid = false;
         while (isValid == false) {
             System.out.print(prompt);
             s = entry.next();  // read user entry
             entry.nextLine();  // discard any other data entered on the line
             if (s.equalsIgnoreCase(valid1) || s.equalsIgnoreCase(valid2)) {
-                if (s.equalsIgnoreCase("y")) {
-                    braille = true;
+                if (s.contains("y")) {
+                    s = "Yes";
                 } else {
-                    braille = false;
+                    s = "No";
                 }
                 isValid = true;
             } else {
                 System.out.print(invalidPrompt);
             }
         }
-        return braille;
+        return s;
     }
 }

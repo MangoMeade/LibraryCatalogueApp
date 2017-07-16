@@ -29,9 +29,9 @@ public class LibraryImplementation {
 
         //Loop until user selects "Exit" (enters the key = MAIN_MAX_ENTRY):
         do {
-            System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+            System.out.printf("\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
             System.out.println("Main Menu: Which action would you like to perform?");
-            System.out.printf("----------------------------------------------------------------------------------------------------\n");
+            System.out.printf("-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
 
             //Print Main Menu:
             for (HashMap.Entry<Integer, String> option : menu.entrySet()) {
@@ -96,22 +96,26 @@ public class LibraryImplementation {
 
     //Print current library catalogue to console:
     public void printCatalogue(ArrayList<Book> consoleCatalogue) {
-        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+        System.out.printf("\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
         System.out.print("Current catalogue...");
-        System.out.printf("\n----------------------------------------------------------------------------------------------------\n");
+        System.out.printf("\n-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
 
         int i = 1;
 
+        System.out.printf("\n%-5s%-60s%-30s%-18s%-15s%-15s%-15s\n", "#", "Title:", "Author:", "Genre:", "Braille:", "Status:", "Due Date:");
+        System.out.printf("%-5s%-60s%-30s%-18s%-15s%-15s%-15s\n","--", "------", "-------", "------", "--------", "-------", "---------");
+
         //Loop through each book and print attributes (including due date if checked out):
         for (Book book : consoleCatalogue) {
-            System.out.print(i + " " + book.getTitle() + " " + book.getAuthor() + " " + book.getGenre() + " " + book.getBraille() + " " + book.getStatus());
+
+            System.out.printf("%-5s%-60s%-30s%-18s%-15s%-15s", i, book.getTitle(), book.getAuthor(), book.getGenre(), book.getBraille(), book.getStatus());
             i = i + 1;
             if (book.getStatus() == Status.CHECKED_OUT) {
 
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
                 String formattedString = book.getDueDate().format(formatter);
 
-                System.out.print(" " + formattedString);
+                System.out.printf("%-15s", formattedString);
             }
             System.out.println();
         }

@@ -20,9 +20,12 @@ public class BookAdder extends CatalogueTextFile{
         book.setTitle(Validator.getString("Book title? "));
         book.setAuthor(Validator.getString("Book author? "));
         book.setDueDate(dueDate);
-        book.setBraille(Validator.getString("Is this book Braille? (y/n)", "Invalid entry. Please enter \"y\" or \"n\"", "y", "n"));
+        book.setBraille(Validator.getString("Is this book in Braille? (y/n) ", "Invalid entry. Please enter \"y\" or \"n\". ", "y", "n"));
         book.setStatus(Status.ON_SHELF);
-        book.setGenre(Genre.getEnumVersion(Validator.getString("What is the book genre? (Biographical, Drama, Fiction, Nonfiction, Historical, Mystery)").toLowerCase()));
+        book.setGenre(Genre.getEnumVersion(Validator.getString("What is the book genre? (Biographical, Drama, Fiction, Nonfiction, Historical, Mystery) ").toLowerCase()));
+
+        System.out.println();
+        System.out.println("Thank you. Select option 1 below to confirm this book was properly added to the catalogue.");
 
         //Append the book to the library catalogue saved in "catalogue":
         TextFileReaderWriter fileWriter = new TextFileReaderWriter();

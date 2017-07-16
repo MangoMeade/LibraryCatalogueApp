@@ -20,16 +20,16 @@ public class CheckoutImplementation {
 
         //Verify book is on the shelf and if it is call dueDateCreation to change status and due date:
         if (catalogue.get(checkoutSelection - 1).getStatus() == Status.ON_SHELF) {
-            System.out.printf("----------------------------------------------------------------------------------------------------\n");
+            System.out.printf("-----------------------------------------------------------------------------------------------------------------------------------------------------------\n");
             System.out.println("\nCheckout successful...\n");
             dueDateCreation(catalogue.get(checkoutSelection - 1));
             System.out.println();
             System.out.println("Please stop by the circulation desk to pick up your book.");
         }
 
-        //If book is not on the shelf, inform the user and return to the Main Menu (runMainLoop):
+        //If book is not on the shelf, inform the user and return to Menu:
         else {
-            System.out.println("\nSorry that book is no longer available. Returning to Main Menu.\n");
+            System.out.println("\nSorry that book is no longer available. Returning to Menu.");
         }
     }
 
@@ -40,6 +40,9 @@ public class CheckoutImplementation {
 
         //Assign book status to check out:
         checkoutBook.setStatus(Status.CHECKED_OUT);
+
+        System.out.printf("%-60s%-30s%-18s%-15s%-15s%-15s\n", "Title:", "Author:", "Genre:", "Braille:", "Status:", "Due Date:");
+        System.out.printf("%-60s%-30s%-18s%-15s%-15s%-15s\n", "------", "-------", "------", "--------", "-------", "---------");
 
         //Print book to console (with updated attributes)
         System.out.println(checkoutBook.toCheckoutFormat());

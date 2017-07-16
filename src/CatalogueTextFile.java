@@ -3,8 +3,10 @@ import java.io.*;
 /**
  * Created by jenny on 7/12/2017.
  */
-public class CatalogueTextFile {
 
+//CatalogueTextFile was replaced by TextFileReaderWriter:
+
+public class CatalogueTextFile {
 
     public static void readFromCatalogue() {
         try {
@@ -35,17 +37,11 @@ public class CatalogueTextFile {
         try {
             //If the test.txt file does not exist, FileWriter will create it
             FileWriter writer = new FileWriter("catalogue.txt", false);
-            //BufferedWriter buffWriter = new BufferedWriter(writer);
             writer.write(userInput + "  ");
             writer.write("\n");
             System.out.println();
 
-            //To add a book:
-            //writer.write("\n" + Validator.getString("Enter book title: "));
-            //System.out.println("This book has been saved!\n");
-
             writer.close();
-            //buffWriter.close();
 
         } catch (IOException e) {
             e.printStackTrace();

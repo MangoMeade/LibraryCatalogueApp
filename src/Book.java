@@ -1,6 +1,5 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 /**
  * Created by jenny on 7/12/2017.
@@ -14,8 +13,8 @@ public class Book {
     private Status status;
     private Genre genre;
 
+    //Constructors:
     public Book() {
-
     }
 
     public Book(String title, String author, LocalDate dueDate, Boolean braille, Status status, Genre genre) {
@@ -75,7 +74,7 @@ public class Book {
         this.genre = genre;
     }
 
-/*    @Override
+    /*@Override
     public String toString() {
         return "Title: " + title + "   Author: " + author + "   Braille: " + braille + "   Status: " + status + "   Genre: " + genre + "   Previous Due Date: " + dueDate;
     }*/
@@ -83,7 +82,6 @@ public class Book {
     @Override
     public String toString() {
         return title + "  " + author + "  " + braille + "  " + status + "  " + dueDate + "  " + genre;
-
     }
 
     public String toFileFormat() {
@@ -106,7 +104,7 @@ public class Book {
         return title + " " + author + " " + genre + " " + braille + " " + status + " " + formattedString;
     }
 
-//    public String toFileFormat() {
-//        return title + "," + author + "," + dueDate + "," + braille + "," + status + "," + genre);
-//    }
+    /*public String toFileFormat() {
+        return title + "," + author + "," + dueDate + "," + braille + "," + status + "," + genre);
+    }*/
 }

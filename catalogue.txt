@@ -21,3 +21,7 @@ The Kite Runner,Khaled Hosseini,07/14/2017,false,On Shelf,Drama
 1984,George Orwell,07/29/2017,false,Checked Out,Fiction
 The Girl with the Dragon Tattoo,Mikael Blomkvist,07/28/2017,false,On Shelf,Mystery
 Murder on the Orient Express,Agatha Christie,07/14/2017,false,On Shelf,Mystery
+All the Light We Cannot See,Anthony Boerr,07/30/2017,false,Checked Out,Historical
+Are You My Mother,P.D. Eastman,07/16/2017,true,On Shelf,Fiction
+The Da Vinci Code,Dan Brown,07/16/2017,false,On Shelf,Fiction
+And Then There Were None,Agatha Christie,07/16/2017,false,On Shelf,Mystery

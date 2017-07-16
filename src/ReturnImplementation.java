@@ -58,6 +58,7 @@ public class ReturnImplementation {
         System.out.println("\n" + returnedBook.toCheckoutFormat());
     }
 
+    //Print currently checked out books to console:
     public HashMap printReturnCatalogue(ArrayList<Book> catalogue, ArrayList<Book> checkedoutCatalogue, HashMap<Integer, Book> bookIndex) {
         int i = 1;
 

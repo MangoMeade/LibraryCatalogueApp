@@ -17,7 +17,7 @@ public class BookAdder extends CatalogueTextFile{
         Book book = new Book();
 
         //Get book attributes from the user:
-        book.setTitle(Validator.getString("Book title? "));
+        book.setTitle(Validator.getString("Please enter the title of the book you would like to add? "));
         book.setAuthor(Validator.getString("Book author? "));
         book.setDueDate(dueDate);
         book.setBraille(Validator.getString("Is this book in Braille? (y/n) ", "Invalid entry. Please enter \"y\" or \"n\". ", "y", "n"));

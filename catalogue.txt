@@ -20,7 +20,7 @@ A Streetcar Named Desire,Tennessee Williams,07/29/2017,Yes,On Shelf,Drama
 The Kite Runner,Khaled Hosseini,07/14/2017,No,On Shelf,Drama
 1984,George Orwell,07/29/2017,No,On Shelf,Fiction
 The Girl with the Dragon Tattoo,Mikael Blomkvist,07/30/2017,No,Checked Out,Mystery
-Murder on the Orient Express,Agatha Christie,07/14/2017,No,On Shelf,Mystery
+Murder on the Orient Express,Agatha Christie,07/30/2017,No,Checked Out,Mystery
 All the Light We Cannot See,Anthony Boerr,07/30/2017,No,Checked Out,Historical
 Are You My Mother,P.D. Eastman,07/30/2017,Yes,On Shelf,Fiction
 The Da Vinci Code,Dan Brown,07/30/2017,No,Checked Out,Fiction
@@ -29,5 +29,6 @@ The Pillars of the Earth,Ken Follett,07/30/2017,Yes,Checked Out,Fiction
 The Cat in the Hat,Dr. Seuss,07/30/2017,Yes,Checked Out,Fiction
 The Tale of Peter Rabbit,Beatrix Potter,07/16/2017,Yes,On Shelf,Fiction
 The Whistler,John Grisham,07/16/2017,Yes,On Shelf,Mystery
-Camino Island,John Grisham,07/16/2017,No,On Shelf,Mystery
+Camino Island,John Grisham,07/30/2017,No,On Shelf,Mystery
 The Rainbow Fish,Marcus Pfister,07/16/2017,Yes,On Shelf,Fiction
+Nancy Drew and the Case of the Missing Locket,Carolyn Keene,07/30/2017,No,Checked Out,Mystery
